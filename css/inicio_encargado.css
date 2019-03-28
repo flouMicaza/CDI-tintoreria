@@ -1,0 +1,10 @@
+.boton {
+  height: 200px;
+  width: 49.5%;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.div-cuadros {
+  margin: 50px;
+}
