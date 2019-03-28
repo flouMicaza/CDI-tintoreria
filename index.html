@@ -4,12 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lavandería Politécnica</title>
+    <title>Tintorería Politécnica</title>
+
+    <!--Enlazamos las hojas de estilo aplicando primero el normalizador-->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+
+    <!-- Enlazamos los scripts necesarios -->
+    <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./js/carga.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#slider').load("./html/login.html");
+      });
+    </script>
+
   </head>
   <body>
     <header>
-      <img src="./assets/img/washing-machine.svg" alt="Lavandería Politécnica">
-      <h1>Lavandería Politécnica</h1>
+      <h1>
+        <a id="image-header" href="#"><img src="./assets/img/washing-machine.svg" alt="Tintorería Politécnica"></a>
+        <a id="title-header" href="./html/principal.html"> Lavandería Politécnica </a>
+      </h1>   
     </header>
+    <div id="slider"></div>
   </body>
 </html>

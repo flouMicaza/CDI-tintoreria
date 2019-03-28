@@ -1,8 +1,29 @@
 @import "./colors.scss";
+
 body{
   background: $gray-background;
   
   header{
-    color: $blue-background;
+    background: $blue-background;
+    width: 100%;
+    display: inline-block;
+
+    h1{
+      display: flex;
+      align-items: center;
+      margin: 0px;
+
+      #image-header{
+        margin-left: 20px;
+
+        img{
+          padding: 4px;
+          width: 65px;
+          height: 65px;
+        }
+      }
+      #title-header{ margin-left: 15px; }
+      
+    }  
   }
 }

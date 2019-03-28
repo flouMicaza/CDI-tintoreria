@@ -1,0 +1,26 @@
+body {
+  background: #e0ebfc;
+}
+body header {
+  background: #a4c9ff;
+  width: 100%;
+  display: inline-block;
+}
+body header h1 {
+  display: flex;
+  align-items: center;
+  margin: 0px;
+}
+body header h1 #image-header {
+  margin-left: 20px;
+}
+body header h1 #image-header img {
+  padding: 4px;
+  width: 65px;
+  height: 65px;
+}
+body header h1 #title-header {
+  margin-left: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */

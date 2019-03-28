@@ -13,6 +13,8 @@ Y agregar al fin del arcvhivo la siguiente línea
 
 Una vez hecho esto ya es posible convertir los archivos *.scss a *.css con el siguiente comando
               sass inputfile.scss outputfile.css
-      
+
+Para montar el servidor local (Con ayuda de Python) ejecutar el siguiten comando
+      python -m SimpleHTTPServer
 
 
