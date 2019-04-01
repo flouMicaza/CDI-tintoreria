@@ -1,17 +1,20 @@
 
-function prueba() {
+function ingresar() {
   var usuarios = JSON.parse(window.localStorage.getItem("datos")).usuarios;
   var user = $("#user").val();
   var pass = $("#password").val();
 
-  var pass2 = usuarios.find(x => x.nombre === user).clave;
+  var usuario = usuarios.find(x => x.nombre == user);
   
-  if (pass2 == pass){
-    $('#slider').load("./html/principal.html");
+  if (usuario === undefined){
+    alert("Usuario no existe");
   }
   else{
-    $("#wrong-pass").show();
+    if (usuario.clave == pass){
+      $('#slider').load("./html/inicio_encargado.html");
+    }
+    else{
+      $("#wrong-pass").show();
+    }
   }
-  
-  
 }
