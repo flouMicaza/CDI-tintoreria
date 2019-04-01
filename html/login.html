@@ -1,27 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login Tintorería</title>
-
-    <!--Enlazamos las hojas de estilo aplicando primero el normalizador-->
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
-
-    <script src="../js/login.js"></script>
-
-  </head>
-  <body>
-    <div id="login-container">
-      <div id=""><img id="image-login" src="../assets/img/login.svg" alt="login"></div>
-      <form class="form" method="post" action="#">
-        <input type="text" name="demail" id="email" placeholder="Usuario">
+<body>
+  <div id="login-container">
+    <div id="image-login"><img id="image-login" src="../assets/img/login.svg" alt="login"></div>
+    <form class="form" method="post" action="#">
+      <div>
+        <label class="ui-icon ui-icon-person"></label>
+        <input type="text" name="demail" id="user" placeholder="Usuario" data-icon="user">
+      </div>
+      <div>
+        <label class="ui-icon  ui-icon-locked"></label>
         <input type="password" name="password" id="password" placeholder="Contraseña">
-        <input type="button" name="login" id="login" value="Ingresar">
-      </form>
+      </div>
+      
+      <input type="button" name="login" id="login" value="Ingresar" onclick="prueba();">
+    </form>
+    <div id="wrong-pass" class="ui-state-error" style="display:none">
+      <p>Datos inconrrectos, intenta de nuevo</p>
     </div>
-  </body>
-</html>
+    <a href="#"><p>¿Has olvidado tu contraseña?</p></a>
+  </div>
+</body>

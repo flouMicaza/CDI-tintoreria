@@ -22,7 +22,7 @@ function cargar() {
 	],
 	articulos: [
 	{clave: 1, nombre: "detergente", stock: 1 , disponible: true}
-	]
+	]}
 
   window.localStorage.setItem("datos", JSON.stringify(datos));
 }

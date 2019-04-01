@@ -1,9 +1,38 @@
 #login-container {
   display: flex;
+  width: fit-content;
+  width: -moz-fit-content;
+  flex-direction: column;
+  align-items: center;
+  margin: 10vh auto;
+  padding-top: 15px;
+  border: outset;
+  background: rgba(55, 97, 204, 0.2);
+  border-radius: 1em;
 }
 #login-container #image-login {
-  background: #3762cc;
+  background: none;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
+  margin-bottom: 10px;
+}
+#login-container .form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 50px 50px 50px;
+}
+#login-container .form div input {
+  margin: 0.4em 0px;
+  border-radius: 0.6em;
+}
+#login-container .form div input::-webkit-input-placeholder {
+  text-align: center;
+}
+#login-container .form div input::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
 }
 
 /*# sourceMappingURL=style-login.css.map */

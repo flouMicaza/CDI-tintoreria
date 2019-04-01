@@ -9,14 +9,19 @@
     <!--Enlazamos las hojas de estilo aplicando primero el normalizador-->
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style-login.css">
     <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
 
     <!-- Enlazamos los scripts necesarios -->
     <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
     <script type="text/javascript" src="./js/carga.js"></script>
+    <script src="../js/login.js"></script>
+
     <script>
       $(document).ready(function(){
         $('#slider').load("./html/login.html");
+        cargar();
       });
     </script>
 
@@ -25,8 +30,8 @@
     <header>
       <h1>
         <a id="image-header" href="#"><img src="./assets/img/washing-machine.svg" alt="Tintorería Politécnica"></a>
-        <a id="title-header" href="./html/principal.html"> Lavandería Politécnica </a>
-      </h1>   
+        <a id="title-header" href="./html/principal.html"> Tintorería Politécnica </a>
+      </h1>
     </header>
     <div id="slider"></div>
   </body>
