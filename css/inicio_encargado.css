@@ -1,3 +1,8 @@
+.btn-primary:hover {
+  background-color: #a4c9ff;
+  border-color: #a4c9ff;
+  color: #3762cc;
+}
 .boton {
   height: 200px;
   width: 49.5%;
@@ -9,3 +14,4 @@
 .divCuadros {
   margin: 50px;
 }
+/*# sourceMappingURL=inicio_encargado.css.map */

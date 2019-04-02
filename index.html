@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Tintorería Politécnica</title>
 
     <!--Enlazamos las hojas de estilo aplicando primero el normalizador-->
-    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
-    <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="jquery-ui-1.12.1.custom/jquery-ui.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
 
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style-login.css"/>
-    <link rel="stylesheet" type="text/css" href="css/inicio_encargado.css"/>
-
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style-login.css" />
+    <link rel="stylesheet" type="text/css" href="./css/inicio_encargado.css" />
 
     <!-- Enlazamos los scripts necesarios -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -22,20 +28,26 @@
 
     <script type="text/javascript" src="./js/carga.js"></script>
     <script type="text/javascript" src="./js/login.js"></script>
+    <script type="text/javascript" src="./js/inicio_encargado.js"></script>
 
     <script>
-      $(document).ready(function(){
-        $('#slider').load("./html/login.html");
+      $(document).ready(function() {
+        $("#slider").load("./html/login.html");
         cargar();
       });
     </script>
-
   </head>
   <body>
     <header>
       <h1>
-        <a id="image-header" href="#"><img src="./assets/img/washing-machine.svg" alt="Tintorería Politécnica"></a>
-        <a id="title-header" href="./html/principal.html"> Tintorería Politécnica </a>
+        <a id="image-header" href="#"
+          ><img
+            src="./assets/img/washing-machine.svg"
+            alt="Tintorería Politécnica"
+        /></a>
+        <a id="title-header" href="./html/principal.html">
+          Tintorería Politécnica
+        </a>
       </h1>
     </header>
     <div id="slider"></div>
