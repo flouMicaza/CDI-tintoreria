@@ -1,0 +1,28 @@
+.container {
+  margin-top: 10%;
+}
+
+.Heading {
+  font-weight: bold;
+  text-align: center;
+  background-color: #a4c9ff;
+}
+
+.columna {
+  border: solid;
+  border-width: thin;
+  border-color: black;
+  font-size: large;
+}
+
+.disponible {
+  color: green;
+  font-size: medium;
+}
+
+.no-disponible {
+  color: red;
+  font-size: medium;
+}
+
+/*# sourceMappingURL=control_stock.css.map */
