@@ -13,17 +13,35 @@
   border-width: thin;
   border-color: black;
   font-size: large;
+  text-align: center;
 }
 
 .disponible {
   color: green;
-  font-size: medium;
+  font-size: smaller;
+  text-align: left;
 }
 
 .no-disponible {
   color: red;
-  font-size: medium;
+  font-size: smaller;
+  text-align: left;
 }
 
+.col-2 {
+  padding: 5px;
+}
 
-/*# sourceMappingURL=control_stock.css.map */
+#demo {
+  padding: 10px;
+}
+
+label {
+  cursor: pointer;
+}
+
+.opciones {
+  text-align: left;
+}
+
+/*# sourceMappingURL=tablas.css.map */
