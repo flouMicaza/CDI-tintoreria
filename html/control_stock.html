@@ -16,18 +16,22 @@
       <div class="col-2 columna opciones"></div>
     </div>
 
-    <div class="row">
-      <div class="col-2 columna">
+    <div class="row" id="row1">
+      <div class="col-2 columna" id="cantidad-1">
         50
       </div>
-      <div class="col-4 columna">
+      <div class="col-4 columna" id="nombre-1">
         Detergente super
       </div>
-      <div class="col-2 columna">
+      <div class="col-2 columna" id="precio-1">
         10 &euro;
       </div>
-      <div class="col-2 columna no-disponible">
-        <div class="custom-control custom-switch" onclick="botondiv(this);">
+      <div class="col-2 columna no-disponible" id="disponible-1">
+        <div
+          class="custom-control custom-switch"
+          id="switch1"
+          onclick="switchDisponibilidad(this);"
+        >
           <input
             type="checkbox"
             class="custom-control-input"
@@ -38,12 +42,13 @@
           </label>
         </div>
       </div>
-      <div class="col-2 columna opciones">
+      <div class="col-2 columna opciones" id="opciones-1">
         <input
           type="image"
           src="../assets/img/pencil.svg"
           width="30"
           height="30"
+          onclick="editarStock('1');"
         />
         <input
           type="image"
@@ -53,18 +58,21 @@
         />
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="row2">
       <div class="col-2 columna">
         50
       </div>
-      <div class="col-4 columna">
+      <div class="col-4 columna" id="nombre-2">
         Detergente super
       </div>
       <div class="col-2 columna">
         10 &euro;
       </div>
       <div class="col-2 columna no-disponible">
-        <div class="custom-control custom-switch" onclick="botondiv(this);">
+        <div
+          class="custom-control custom-switch"
+          onclick="switchDisponibilidad(this);"
+        >
           <input
             type="checkbox"
             class="custom-control-input"
@@ -81,6 +89,7 @@
           src="../assets/img/pencil.svg"
           width="30"
           height="30"
+          onclick="editarStock('2');"
         />
         <input
           type="image"
@@ -90,18 +99,21 @@
         />
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="row3">
       <div class="col-2 columna">
         50
       </div>
-      <div class="col-4 columna">
+      <div class="col-4 columna" id="nombre-3">
         Detergente super
       </div>
       <div class="col-2 columna">
         10 &euro;
       </div>
       <div class="col-2 columna no-disponible">
-        <div class="custom-control custom-switch" onclick="botondiv(this);">
+        <div
+          class="custom-control custom-switch"
+          onclick="switchDisponibilidad(this);"
+        >
           <input
             type="checkbox"
             class="custom-control-input"
@@ -118,6 +130,7 @@
           src="../assets/img/pencil.svg"
           width="30"
           height="30"
+          onclick="editarStock('3');"
         />
         <input
           type="image"
@@ -127,18 +140,21 @@
         />
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="row4">
       <div class="col-2 columna">
         50
       </div>
-      <div class="col-4 columna">
+      <div class="col-4 columna" id="nombre-4">
         Detergente super
       </div>
       <div class="col-2 columna">
         10 &euro;
       </div>
       <div class="col-2 columna no-disponible">
-        <div class="custom-control custom-switch" onclick="botondiv(this);">
+        <div
+          class="custom-control custom-switch"
+          onclick="switchDisponibilidad(this);"
+        >
           <input
             type="checkbox"
             class="custom-control-input"
@@ -155,12 +171,15 @@
           src="../assets/img/pencil.svg"
           width="30"
           height="30"
+          alt="editar"
+          onclick="editarStock('4');"
         />
         <input
           type="image"
           src="../assets/img/trashcan.svg"
           width="30"
           height="30"
+          alt="borrar"
         />
       </div>
     </div>
