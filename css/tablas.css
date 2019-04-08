@@ -36,4 +36,8 @@
   padding: 10px;
 }
 
+label {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=tablas.css.map */
