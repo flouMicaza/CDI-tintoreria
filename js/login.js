@@ -14,7 +14,8 @@ function ingresar() {
       $('#slider').load("./html/inicio_encargado.html");
     }
     else{
-      $("#wrong-pass").show();
+      $("#wrong-pass").hide();
+      $("#wrong-pass").show("");
     }
   }
 }
