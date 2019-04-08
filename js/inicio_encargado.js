@@ -7,7 +7,7 @@ function irControlDeStock() {
 }
 
 function irVerPedido() {
-  $("#slider").load("../html/ver_pedidos.html");
+  $("#slider").load("../html/pedidos_trabajador.html");
 }
 
 function irRealizarVenta() {

@@ -2,134 +2,71 @@
   <div class="container">
     <div class="row Heading">
       <div class="col-2 columna">
-        Cantidad
-      </div>
-      <div class="col-4 columna">
-        Nombre
+        ID Pedido
       </div>
       <div class="col-2 columna">
-        Precio
+        Tipo de Prenda
       </div>
       <div class="col-2 columna">
-        Disponible
+        Tipo de Servicio
       </div>
-      <div class="col-2 columna opciones">
-        Opciones
+      <div class="col-2 columna">
+        Estado
+      </div>
+      <div class="col-2 columna">
+        Cambiar Estado
+      </div>
+      <div class="col-2 columna">
+        Contactar Cliente
       </div>
     </div>
 
     <div class="row">
       <div class="col-2 columna">
-        50
-      </div>
-      <div class="col-4 columna">
-        Detergente super
+        1224
       </div>
       <div class="col-2 columna">
-        10 &euro;
+        Falda
       </div>
-      <div class="col-2 columna disponible">
-        <div class="custom-control custom-switch">
-          <input
-            type="checkbox"
-            class="custom-control-input"
-            id="activacion1"
-          />
-          <label class="custom-control-label" for="activacion1">
-            Disponible
-          </label>
+      <div class="col-2 columna">
+        Lavado Completo
         </div>
-      </div>
-      <div class="col-2 columna">
-        <input
-          type="image"
-          src="../assets/img/pencil.svg"
-          width="25"
-          height="25"
-        />
-        <input
-          type="image"
-          src="../assets/img/trashcan.svg"
-          width="25"
-          height="25"
-        />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-2 columna">
-        50
-      </div>
-      <div class="col-4 columna">
-        Detergente super
-      </div>
-      <div class="col-2 columna">
-        10 &euro;
-      </div>
-      <div class="col-2 columna disponible">
-        <div class="custom-control custom-switch">
-          <input
-            type="checkbox"
-            class="custom-control-input"
-            id="activacion1"
-          />
-          <label class="custom-control-label" for="activacion1">
-            Disponible
-          </label>
-        </div>
+      <div class="col-2 columna opciones">
+        Lavando
       </div>
       <div class="col-2 columna">
         
-		<button data-toggle="collapse" data-target="#demo" aria-expanded="false" aria-controls"demo">Contactar Cliente</button>	
-		
-      </div>
-	  </div>
-	  <div class="row">
-	  <div class="col-12 columna sms">
-		<div id="demo" class="collapse " style="padding:10px">
-				 
-			<label for="obs">Mensaje de Texto</label>
-            <textarea name="idc" id="obs" class="form-control"></textarea>
-		</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-2 columna">
-        50
-      </div>
-      <div class="col-4 columna">
-        Detergente super
-      </div>
-      <div class="col-2 columna">
-        10 &euro;
-      </div>
-      <div class="col-2 columna no-disponible">
-        <div class="custom-control custom-switch">
-          <input
-            type="checkbox"
-            class="custom-control-input"
-            id="activacion1"
-          />
-          <label class="custom-control-label" for="activacion1">
-            No disponible
-          </label>
+
+         <select name="tipo_prenda" id="tipo_prenda"  class="form-control">
+            
+         
+            <option value="camiseta">Lavando</option>
+            <option value="camisa">Secando</option>
+            <option value="pantalon">En Espera</option>
+            <option value="falda">Finalizado</option>
+        
+          
+
+          </select>
+          
         </div>
+        <div class="col-2 columna">
+        <button class="btn btn-primary" data-toggle="collapse" data-target="#demo" aria-expanded="false" aria-controls"demo">Contactar Cliente</button>
       </div>
-      <div class="col-2 columna">
-		<button data-toggle="collapse" data-target="#demo" aria-expanded="false" aria-controls"demo">Contactar Cliente</button>	
-			  
-		</div>
-		
       </div>
-	  <div class="row">
-	  <div class="col-12 columna sms">
-		<div id="demo" class="collapse " style="padding:10px">
-				 
-			<label for="obs">Mensaje de Texto</label>
+      <div class="row">
+    <div class="col-12 columna sms">
+    <div id="demo" class="collapse ">
+         
+      <label for="obs">Introduzca aquí su mensaje</label>
             <textarea name="idc" id="obs" class="form-control"></textarea>
-		</div>
-	  </div>
-	  </div>
+        <div style="margin-top:10px; text-align: right"><button class="btn btn-primary"> Enviar SMS</button></div>
+            
     </div>
-   
+      </div>
+    </div>
+    </div>
+    
+    
  
 </body>
