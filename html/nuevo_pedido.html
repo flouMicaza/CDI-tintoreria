@@ -1,91 +1,84 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta content="text/html; charset=utf-8" />
 
-    <title>Tintorería</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-
-    
-    
-  </head>
   <body>
-    
-    <form action=" ">
-     <div class="row">
-
-       <div class="col" style="margin-left: 100px; margin-top: 100px">
-         
-        
-          <label for="tipo_prenda">Tipo de Prenda</label>
-         <select name="tipo_prenda" id="tipo_prenda"  class="form-control">
-            
-            <option value="selec">--Seleccionar--</option>
-            <option value="camiseta">Camiseta</option>
-            <option value="camisa">Camisa</option>
-            <option value="pantalon">Pantalón</option>
-            <option value="falda">Falda</option>
-            <option value="vestido">Vestido</option>
-          
-
-          </select>
-
-     <label for="tipo_tela">Tipo de Tela</label>
-         <select name="tipo_tela" id="tipo_tela"  class="form-control">
-            
-            <option value="selec">--Seleccionar--</option>
-            <option value="algodon">Algodón</option>
-            <option value="lana">Lana</option>
-            <option value="cuero">Cuero</option>
-            <option value="seda">Seda</option>
-            <option value="franela">Franela</option>
-            <option value="licra">Licra</option>
-          
-
-          </select>
-
-                <div class="modista" style="margin-top: 20px; padding-left: 20px; margin-left: 20px;">
-
-                <input type="checkbox" id="modista" class="form-check-input">
-                <label for="modista" class="form-check-label" >Modista</label>
-
-                </div>
-
-                <div class="lavados" style="margin-top: 20px; padding-left: 20px; margin-left: 20px;">
-
-                <input type="checkbox" id="modista" class="form-check-input">
-                <label for="modista" class="form-check-label" >Modista</label>
-
+    <div class="container">
+    <form action=" " role="form">
+      <div class="row">
+        <div class="col-6">
+          <div class="card bg-light">
+            <div class="card-header">
+              Información de la prenda
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="tipo_prenda">Tipo de Prenda</label>
+                <select name="tipo_prenda" id="tipo_prenda" class="form-control">
+                  <option value="selec">--Seleccionar--</option>
+                  <option value="camiseta">Camiseta</option>
+                  <option value="camisa">Camisa</option>
+                  <option value="pantalon">Pantalón</option>
+                  <option value="falda">Falda</option>
+                  <option value="vestido">Vestido</option>
+                </select>
               </div>
+              <div class="form-group">
+                <label for="tipo_tela">Tipo de Tela</label>
+                <select name="tipo_tela" id="tipo_tela" class="form-control">
+                  <option value="selec">--Seleccionar--</option>
+                  <option value="algodon">Algodón</option>
+                  <option value="lana">Lana</option>
+                  <option value="cuero">Cuero</option>
+                  <option value="seda">Seda</option>
+                  <option value="franela">Franela</option>
+                  <option value="licra">Licra</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <div
+                  class="modista"
+                  
+                >
+                  <input type="checkbox" id="modista" class="form-check-input" />
+                  <label for="modista" class="form-check-label">Modista</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="lavados">
+                  <input type="checkbox" id="modista" class="form-check-input" />
+                  <label for="modista" class="form-check-label">Modista</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
 
-       </div>
-
-       <div class="col" style="width: 100px; margin-left: 30px; margin-right: 90px; margin-top: 100px">
-
-            <label for="idt">ID Trabajador</label>
-            <input type="text" name="idt" id="idt" class="form-control">
-
-            <label for="idc">ID Cliente</label>
-            <input type="text" name="idc"id="idc" class="form-control">
-
-            <label for="otros">Trabajos Adicionales</label>
-            <input type="text" name="otros" id="otros" class="form-control">
-
-            <label for="obs">Observaciones</label>
-            <input type="text" name="idc" id="obs" class="form-control" style="height: 100px;">
-
-         
-       </div>
-
-   </div>
-      
+        <div class="col-6">
+          <div class="card bg-light">
+            <div class="card-header">
+              Información del cliente
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="idt">ID Trabajador</label>
+                <input type="text" name="idt" id="idt" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="idc">ID Cliente</label>
+                <input type="text" name="idc" id="idc" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="otros">Trabajos Adicionales</label>
+                <input type="text" name="otros" id="otros" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="obs">Observaciones</label>
+                <textarea name="idc" id="obs" class="form-control"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </form>
-
-    
+    </div>
   </body>
 </html>
