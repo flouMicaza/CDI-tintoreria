@@ -4,7 +4,7 @@ body {
 body header {
   background: #a4c9ff;
   width: 100%;
-  display: inline-block;
+  display: flex;
 }
 body header h1 {
   display: flex;
@@ -21,6 +21,14 @@ body header h1 #image-header img {
 }
 body header h1 #title-header {
   margin-left: 15px;
+}
+body header #menu-nav {
+  align-content: center;
+}
+body header #logout {
+  margin-left: auto;
+  font-size: 3em;
+  margin-right: 0.5em;
 }
 
 /*# sourceMappingURL=style.css.map */

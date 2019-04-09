@@ -12,6 +12,9 @@ function ingresar() {
   else{
     if (usuario.clave == pass){
       $('#slider').load("./html/inicio_encargado.html");
+      $("#title-header").hide();
+      $("#menu-nav").show();
+      $("#logout").show();
     }
     else{
       $("#wrong-pass").hide();
@@ -19,3 +22,8 @@ function ingresar() {
     }
   }
 }
+
+function cargaNuevoPedido(){ $("#slider").load("./html/nuevo_pedido.html");}
+function cargaStock(){ $("#slider").load("./html/control_stock.html");}
+function cargaPedidos(){ $("#slider").load("./html/ver_pedidos.html");}
+function cargaVentas(){ $("#slider").load("./html/hacer_venta.html");}
