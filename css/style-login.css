@@ -23,5 +23,8 @@
   flex-direction: column;
   margin: 0 50px 50px 50px;
 }
+#login-container form #login-icon {
+  margin-right: 0.5em;
+}
 
 /*# sourceMappingURL=style-login.css.map */

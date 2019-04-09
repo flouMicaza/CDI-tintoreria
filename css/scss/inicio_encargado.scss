@@ -1,0 +1,7 @@
+@import "./colors.scss";
+
+.btn-primary:hover {
+  background-color: $blue-background;
+  border-color: $blue-background;
+  color: $dark-blue;
+}

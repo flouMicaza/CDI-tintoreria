@@ -6,8 +6,8 @@ body{
   header{
     background: $blue-background;
     width: 100%;
-    display: inline-block;
-
+    display: flex;
+    
     h1{
       display: flex;
       align-items: center;
@@ -22,8 +22,17 @@ body{
           height: 65px;
         }
       }
-      #title-header{ margin-left: 15px; }
-      
-    }  
+      #title-header{ margin-left: 15px; } 
+    }
+
+    #menu-nav{
+      align-content: center;
+    }
+
+    #logout{
+      margin-left: auto;
+      font-size: 3em;
+      margin-right: 0.5em;
+    }
   }
 }

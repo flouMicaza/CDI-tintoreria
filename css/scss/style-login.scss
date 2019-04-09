@@ -1,0 +1,32 @@
+@import "./colors.scss";
+
+#login-container{
+  display: flex;
+  width: fit-content;
+  width: -moz-fit-content;
+  flex-direction: column;
+  align-items: center;
+  margin: 10vh auto;
+  padding-top: 15px;
+  border: outset;
+  background: rgba(55, 97, 204, 0.2);
+  border-radius: 1em;
+
+  #image-login{
+    background: none;
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 50px 50px 50px;
+
+    #login-icon{
+      margin-right: 0.5em;
+    }
+  }
+}

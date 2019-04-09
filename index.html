@@ -8,14 +8,25 @@
 
     <!--Enlazamos las hojas de estilo aplicando primero el normalizador-->
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/style-login.css" />
     <link rel="stylesheet" type="text/css" href="./css/inicio_encargado.css" />
+
     <link rel="stylesheet" type="text/css" href="./css/tablas.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
 
     <!-- Enlazamos los scripts necesarios -->
-
     <script type="text/javascript" src="./js/carga.js"></script>
     <script type="text/javascript" src="./js/login.js"></script>
     <script type="text/javascript" src="./js/inicio_encargado.js"></script>
@@ -29,13 +40,11 @@
     />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-
     <script>
       $(document).ready(function() {
         $("#slider").load("./html/login.html");
@@ -46,16 +55,41 @@
   <body>
     <header>
       <h1>
-        <a id="image-header" href="#"
-          ><img
+        <div id="image-header">
+          <img
             src="./assets/img/washing-machine.svg"
             alt="Tintorería Politécnica"
-        /></a>
-        <a id="title-header" href="./html/principal.html">
+          />
+        </div>
+        <p id="title-header">
           Tintorería Politécnica
-        </a>
+        </p>
       </h1>
+
+      <nav id="menu-nav" class="nav nav-pills" style="display:none">
+        <a class="nav-item nav-link" href="#" onclick="cargaNuevoPedido();"
+          >Nuevo pedido</a
+        >
+        <a class="nav-item nav-link" href="#" onclick="cargaStock();">Stock</a>
+        <a class="nav-item nav-link" href="#" onclick="cargaPedidos();"
+          >Pedidos</a
+        >
+        <a class="nav-item nav-link" href="#" onclick="cargaVentas();"
+          >Ventas</a
+        >
+      </nav>
+
+      <div id="logout" style="display:none">
+        <a href=""><i id="logout-icon" class="fa fa-sign-out-alt"></i></a>
+      </div>
     </header>
+
+    <nav aria-label="page">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Library</li>
+      </ol>
+    </nav>
     <div id="slider"></div>
   </body>
 </html>

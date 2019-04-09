@@ -1,5 +1,6 @@
 <body>
-  <div id="login-container">
+
+  <div id="login-container" class="card">
     <div id="image-login"><img src="../assets/img/user.svg" alt="login"></div>
     <form role="form" action="#" onsubmit="ingresar(); return false">
 
@@ -7,8 +8,8 @@
 
         <div class="form-group">
           <div class="input-group">
-            <div class="input-group-addon">
-              <span class="glyphicon glyphicon-user"></span>
+            <div class="input-group-prepend">
+              <span class="input-group-text"> <i class="fa fa-user"></i> </span>
             </div>
             <input
               id="user"
@@ -24,8 +25,8 @@
 
         <div class="form-group">
           <div class="input-group">
-            <div class="input-group-addon">
-              <span class="glyphicon glyphicon-lock"></span>
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
             </div>
             <input
               name="password"
@@ -36,21 +37,19 @@
               placeholder="Contraseña" required
             />
           </div>
-          <span class="help-block"></span>
         </div>
-
       </div>
 
-      <div class="form-footer">
-        <button type="submit" class="btn">
-          <span class="glyphicon glyphicon-log-in"></span> Ingresar
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block">
+          <span> <i id="login-icon" class="fa fa-sign-in-alt"></i>Ingresar </span>
         </button>
       </div>
       
     </form>
   
-    <div id="wrong-pass" class="ui-state-error" style="display:none">
-      <p>Datos inconrrectos, intenta de nuevo</p>
+    <div id="wrong-pass" class="alert alert-warning" role="alert" style="display:none">
+      Datos inconrrectos, intenta de nuevo
     </div>
     <a href="#"><p>¿Has olvidado tu contraseña?</p></a>
   </div>
