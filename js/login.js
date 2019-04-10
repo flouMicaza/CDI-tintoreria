@@ -16,7 +16,7 @@ function ingresar() {
       $("#image-header").hide();
       $("#title-header").hide();
       $("#menu-nav").show();
-      $
+      $("#usuario-actual").append(usuario.nombre);
     }
     else{
       $("#wrong-pass").hide();
