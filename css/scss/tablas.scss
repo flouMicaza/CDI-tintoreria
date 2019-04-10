@@ -1,11 +1,12 @@
+@import "./colors.scss";
+
 .container {
   margin-top: 5%;
 }
-
 .Heading {
   font-weight: bold;
   text-align: center;
-  background-color: #a4c9ff;
+  background-color: $blue-background;
 }
 
 .columna {
@@ -35,7 +36,6 @@
 #demo {
   padding: 10px;
 }
-
 label {
   cursor: pointer;
 }
@@ -43,5 +43,3 @@ label {
 .opciones {
   text-align: left;
 }
-
-/*# sourceMappingURL=tablas.css.map */
