@@ -1,84 +1,93 @@
-
-  <body>
-    <div class="container">
-    <form action=" " role="form">
-      <div class="row">
-        <div class="col-6">
-          <div class="card bg-light">
-            <div class="card-header">
-              Información de la prenda
-            </div>
-            <div class="card-body">
-              <div class="form-group">
-                <label for="tipo_prenda">Tipo de Prenda</label>
-                <select name="tipo_prenda" id="tipo_prenda" class="form-control">
-                  <option value="selec">--Seleccionar--</option>
-                  <option value="camiseta">Camiseta</option>
-                  <option value="camisa">Camisa</option>
-                  <option value="pantalon">Pantalón</option>
-                  <option value="falda">Falda</option>
-                  <option value="vestido">Vestido</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="tipo_tela">Tipo de Tela</label>
-                <select name="tipo_tela" id="tipo_tela" class="form-control">
-                  <option value="selec">--Seleccionar--</option>
-                  <option value="algodon">Algodón</option>
-                  <option value="lana">Lana</option>
-                  <option value="cuero">Cuero</option>
-                  <option value="seda">Seda</option>
-                  <option value="franela">Franela</option>
-                  <option value="licra">Licra</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <div
-                  class="modista"
-                  
-                >
-                  <input type="checkbox" id="modista" class="form-check-input" />
-                  <label for="modista" class="form-check-label">Modista</label>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="lavados">
-                  <input type="checkbox" id="modista" class="form-check-input" />
-                  <label for="modista" class="form-check-label">Modista</label>
-                </div>
-              </div>
-            </div>
+<body>
+  <div class="container">
+  <form action=" " role="form">
+    <div class="row" >
+      <div class="col-6" style="height:100px">
+        <div class="card bg-light">
+          <div class="card-header">
+    
+      <span> <i class="fa fa-tshirt"></i> </span>
+             Información de la prenda
           </div>
-        </div>
+          <div class="card-body">
+      
+             
+      <div class="form-group">
+       <label for="tipo_prenda">Tipo de Prenda</label>
         
-
-        <div class="col-6">
-          <div class="card bg-light">
-            <div class="card-header">
-              Información del cliente
+              <select name="tipo_prenda" id="tipo_prenda" class="form-control">
+                <option value="selec">--Seleccionar--</option>
+                <option value="camiseta">Camiseta<span> <i class="fa fa-user"></i> </span></option>
+                <option value="camisa">Camisa</option>
+                <option value="pantalon">Pantalón</option>
+                <option value="falda">Falda</option>
+                <option value="vestido">Vestido</option>
+              </select>
             </div>
-            <div class="card-body">
-              <div class="form-group">
-                <label for="idt">ID Trabajador</label>
-                <input type="text" name="idt" id="idt" class="form-control" />
-              </div>
-              <div class="form-group">
-                <label for="idc">ID Cliente</label>
-                <input type="text" name="idc" id="idc" class="form-control" />
-              </div>
-              <div class="form-group">
-                <label for="otros">Trabajos Adicionales</label>
-                <input type="text" name="otros" id="otros" class="form-control" />
-              </div>
-              <div class="form-group">
-                <label for="obs">Observaciones</label>
-                <textarea name="idc" id="obs" class="form-control"></textarea>
-              </div>
+            <div class="form-group">
+              <label for="tipo_tela">Tipo de Tela</label>
+              <select name="tipo_tela" id="tipo_tela" class="form-control">
+                <option value="selec">--Seleccionar--</option>
+                <option value="algodon">Algodón</option>
+                <option value="lana">Lana</option>
+                <option value="cuero">Cuero</option>
+                <option value="seda">Seda</option>
+                <option value="franela">Franela</option>
+                <option value="licra">Licra</option>
+              </select>
+
+            </div>
+      <div class="form-group">
+        <div class="form-check">
+        
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Modista
+        </label>
+        </div>
+      </div>	
+            <div class="form-group" id="botones">
+      <label>Tipo de servicio: </label>
+            <div class="btn-group" role="group" aria-label="Basic example">
+        <input type="image" src="../assets/img/lavadoSeco.png" width="135px" height="135px">
+        <input type="image" src="../assets/img/lavadoNormal.png" width="135px" height="135px">
+        <input type="image" src="../assets/img/pintura.png" width="135px" height="135px">
+      </div>
             </div>
           </div>
         </div>
       </div>
-    </form>
+      
+
+      <div class="col-6" style="height:100px">
+        <div class="card bg-light">
+          <div class="card-header">
+    
+      <span> <i class="fa fa-user"></i> </span>
+             Información del cliente
+          </div>
+          <div class="card-body">
+      
+        <label for="idt">ID Trabajador</label>
+        <input type="text" name="idt" id="idt" placeholder="Buscar trabajador" class="form-control" />
+      
+            <div class="form-group">
+              <label for="idc">ID Cliente</label>
+              <input type="text" name="idc" id="idc" placeholder="Buscar cliente" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="otros">Trabajos Adicionales</label>
+              <input type="text" name="otros" id="otros" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="obs">Observaciones</label>
+              <textarea name="idc" id="obs" class="form-control" ></textarea>
+            </div>
+      <button type="button" class="btn btn-primary mb-2">Agregar pedido</button>
+          </div>
+        </div>
+      </div>
     </div>
-  </body>
-</html>
+  </form>
+  </div>
+</body>

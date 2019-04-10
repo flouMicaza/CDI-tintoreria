@@ -15,19 +15,20 @@ body header h1 #image-header {
   margin-left: 20px;
 }
 body header h1 #image-header img {
-  padding: 4px;
+  padding: 5px;
   width: 65px;
   height: 65px;
 }
 body header h1 #title-header {
-  margin-left: 15px;
+  margin: 0px 15px;
 }
 body header #menu-nav {
   align-content: center;
   width: inherit;
+  padding: 0px 25px;
 }
 body header #menu-nav #nav-list {
-  margin-right: 2.25em;
+  margin-right: 2.3em;
 }
 body header #menu-nav #nav-list i {
   margin-right: 0.15em;

@@ -9,9 +9,11 @@
   margin-top: 10px;
   display: inline-block;
   font-size: xx-large;
+  margin: 0.5em 0.5em;
 }
 
 .divCuadros {
-  margin: 50px;
+  margin: 30px;
+  text-align: center;
 }
 /*# sourceMappingURL=inicio_encargado.css.map */

@@ -17,17 +17,18 @@ body{
         margin-left: 20px;
 
         img{
-          padding: 4px;
+          padding: 5px;
           width: 65px;
           height: 65px;
         }
       }
-      #title-header{ margin-left: 15px; } 
+      #title-header{ margin: 0px 15px; } 
     }
 
     #menu-nav{
       align-content: center;
       width: inherit;
+      padding: 0px 25px;
 
       #nav-list{
         margin-right: 2.3em;

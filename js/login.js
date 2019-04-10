@@ -49,3 +49,8 @@ function cargaInicio(){
   $(".breadcrumb-item").remove();
   $("#breadcrumb").append("<li class='breadcrumb-item'>Inicio</li>");
 }
+function cargaPerfil(){
+  $("#slider").load("./html/perfil_usuario.html");
+  $(".breadcrumb-item").remove();
+  $("#breadcrumb").append("<li class='breadcrumb-item'><a href='#' onclick='cargaInicio();'>Inicio</a></li><li class='breadcrumb-item' aria-current='page'>Perfil</li>");
+}

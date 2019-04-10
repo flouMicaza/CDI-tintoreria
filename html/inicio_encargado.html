@@ -1,20 +1,24 @@
 <body>
-  <div class="divCuadros">
+  <div class="divCuadros container">
   
-    <button type="button" class="boton btn btn-primary btn-lg" onclick="cargaNuevoPedido();">
-      Nuevo pedido
-    </button>
-  
-    <button type="button" class="boton btn btn-primary btn-lg" onclick="cargaStock()">
-      Control de stock
-    </button>
+    <div class="row">
+      <button type="button" class="boton btn btn-primary col" onclick="cargaNuevoPedido();">
+        Nuevo pedido
+      </button>
     
-    <button type="button" class="boton btn btn-primary btn-lg" onclick="cargaPedidos()">
-      Ver pedido
-    </button>
-
-    <button type="button" class="boton btn btn-primary btn-lg" onclick="cargaVentas()">
-      Realizar venta
-    </button>
+      <button type="button" class="boton btn btn-primary col" onclick="cargaStock()">
+        Control de stock
+      </button>
+    </div>
+    
+    <div class="row">
+      <button type="button" class="boton btn btn-primary col" onclick="cargaPedidos()">
+        Ver pedido
+      </button>
+  
+      <button type="button" class="boton btn btn-primary col" onclick="cargaVentas()">
+        Realizar venta
+      </button>
+    </div>
  
 </body>
