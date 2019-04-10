@@ -26,16 +26,8 @@ body header #menu-nav {
   align-content: center;
   width: inherit;
 }
-body header #menu-nav #nav-list {
-  margin-right: 2.25em;
-}
-body header #menu-nav #nav-list i {
-  margin-right: 0.15em;
-}
 body .breadcrumb {
   background-color: transparent;
-  border-bottom-style: groove;
-  margin: 0px 50px 0px 20px;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css%7D.map */

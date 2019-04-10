@@ -34,7 +34,7 @@
   </head>
   <body>
     <header>
-      <h1>
+      <h1 id="all-header">
         <div id="image-header">
           <img
             src="./assets/img/washing-machine.svg"
@@ -45,24 +45,47 @@
         </p>
       </h1>
 
-      <nav id="menu-nav" class="nav nav-pills" style="display:none">
-        <a class="nav-item nav-link" href="#" onclick="cargaNuevoPedido();">Nuevo pedido</a>
-        <a class="nav-item nav-link" href="#" onclick="cargaStock();">Stock</a>
-        <a class="nav-item nav-link" href="#" onclick="cargaPedidos();">Pedidos</a>
-        <a class="nav-item nav-link" href="#" onclick="cargaVentas();">Ventas</a>
-      </nav>
+      <nav id="menu-nav" class="navbar navbar-expand-md navbar-light" style="display:none">
+        <a class="navbar-brand" href="#">
+          <img id="image-nav" src="./assets/img/washing-machine.svg" width="55" height="55" class="d-inline-block" alt="">
+          <label for="image-nav"> Tintorería Politécnica</label>
+        </a>
+        <button class="navbar-toggler bg-light ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul id="nav-list" class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#" onclick="cargaNuevoPedido();">Nuevo pedido</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="cargaStock();">Stock</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="cargaPedidos();">Pedidos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="cargaVentas();">Ventas</a>
+            </li>
 
-      <div id="logout" style="display:none">
-        <a href=""><i id="logout-icon" class="fa fa-sign-out-alt"></i></a>
-      </div>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Encargado
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#"> <i id="login-icon" class="fa fa-user-circle"></i>Perfil</a>
+                <a class="dropdown-item" href=""><i id="login-icon" class="fa fa-sign-out-alt"></i>Cerrar sesión</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
-    <nav aria-label="page">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Library</li>
-      </ol>
+    <nav aria-label="breadcrumb">
+      <ol id="breadcrumb" class="breadcrumb" style="display:none"></ol>
     </nav>
+
     <div id="slider"></div>
   </body>
 </html>
