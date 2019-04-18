@@ -16,7 +16,8 @@ function editarStock(elemento) {
   agregarInputPrecio(elemento);
   agregarSwitchDisponibilidad(elemento);
   var botonesOpciones = document.getElementById("opciones-" + elemento);
-  botonesOpciones.childNodes[1].src = "../assets/img/check.svg";
+  console.log("botoon", botonesOpciones.childNodes[1]);
+  botonesOpciones.childNodes[1].src = "../assets/img/svg/check.svg";
   botonesOpciones.childNodes[1].onclick = guardarCambios;
 }
 
