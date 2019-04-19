@@ -1,86 +1,47 @@
 function switchDisponibilidad(elemento) {
-  console.log("switch: ", elemento.childNodes[0].checked);
-  if (elemento.childNodes[0].checked) {
-    elemento.childNodes[1].innerText = "Disponible";
-    elemento.offsetParent.className = "col-2 columna disponible";
+  var elementoId = elemento.id.split("-")[1];
+  var disponibleLabel = document.getElementById(
+    "disponibleLabel-" + elementoId
+  );
+  if (elemento.childNodes[1].checked) {
+    elemento.childNodes[3].innerText = "Disponible";
+    elemento.offsetParent.className = "col-3 columna disponible";
+    disponibleLabel.innerHTML = "Disponible";
+    disponibleLabel.className = "col-3 columna disponible";
   } else {
-    elemento.childNodes[1].innerText = "No Disponible";
-    elemento.offsetParent.className = "col-2 columna no-disponible";
+    elemento.childNodes[3].innerText = "No Disponible";
+    elemento.offsetParent.className = "col-3 columna no-disponible";
+    disponibleLabel.innerHTML = "No Disponible";
+    disponibleLabel.className = "col-3 columna no-disponible";
   }
 }
 
-function editarStock(elemento) {
-  console.log("editando " + elemento);
-  agregarInputCantidad(elemento);
-  agregarInputNombre(elemento);
-  agregarInputPrecio(elemento);
-  agregarSwitchDisponibilidad(elemento);
-  var botonesOpciones = document.getElementById("opciones-" + elemento);
-  console.log("botoon", botonesOpciones.childNodes[1]);
-  botonesOpciones.childNodes[1].src = "../assets/img/svg/check.svg";
-  botonesOpciones.childNodes[1].onclick = guardarCambios;
+function editarStock(elementoId) {
+  var rowElemento = document.getElementById("rowLabel" + elementoId);
+  rowElemento.style = "display: none";
+  var rowEditable = document.getElementById("rowInput" + elementoId);
+  rowEditable.style = "";
 }
 
-function agregarSwitchDisponibilidad(elemento) {
-  var divDisponible = document.getElementById("disponible-" + elemento);
-  var estadoDisponibilidad = divDisponible.innerText;
-
-  if (estadoDisponibilidad == "Disponible") {
-    var switchHtml = crearSwitch(elemento, "checked");
-    switchHtml += "Disponible </label> </div>";
-    console.log("Disponible");
-  } else {
-    var switchHtml = crearSwitch(elemento, "");
-    switchHtml += "No Disponible </label> </div>";
-    console.log("No disponible");
-  }
-
-  divDisponible.innerHTML = switchHtml;
+function confirmarStock(elementoId) {
+  var rowElemento = document.getElementById("rowLabel" + elementoId);
+  rowElemento.style = "";
+  var rowEditable = document.getElementById("rowInput" + elementoId);
+  rowEditable.style = "display: none";
+  guardarCambios(elementoId);
 }
 
-function crearSwitch(elemento, checked) {
-  var switchHtml = '<div class="custom-control custom-switch" id = "switch';
-  switchHtml += elemento;
-  switchHtml += '" onclick = "switchDisponibilidad(this);">';
-  switchHtml += '<input type="checkbox" class="custom-control-input"';
-  switchHtml += checked;
-  switchHtml += ' id="activacion';
-  switchHtml += elemento;
-  switchHtml += '" />';
-  switchHtml += '<label class="custom-control-label" for="activacion';
-  switchHtml += elemento;
-  switchHtml += '">';
-  return switchHtml;
+function guardarCambios(elementoId) {
+  cambiarValor(elementoId, "cantidad");
+  cambiarValor(elementoId, "nombre");
+  cambiarValor(elementoId, "precio");
 }
-
-function agregarInputPrecio(elemento) {
-  var divPrecio = document.getElementById("precio-" + elemento);
-  var precio = divPrecio.childNodes[0].nodeValue;
-  precio = precio.trim();
-  precio = precio.replace("€", "");
-  divPrecio.childNodes[0].remove();
-  divPrecio.innerHTML =
-    "<input class='form-control' type='text' style='margin:5px' required>";
-  divPrecio.childNodes[0].value = precio;
+function cambiarValor(elementoId, tipo) {
+  var cantidadLabel = document.getElementById(tipo + "Label-" + elementoId);
+  var cantidadInput = document.getElementById(tipo + "Input-" + elementoId);
+  cantidad = cantidadInput.lastElementChild.value;
+  cantidadLabel.innerText = cantidad;
 }
-
-function agregarInputCantidad(elemento) {
-  var divCantidad = document.getElementById("cantidad-" + elemento);
-  var cantidad = divCantidad.childNodes[0].nodeValue;
-  divCantidad.childNodes[0].remove();
-  divCantidad.innerHTML =
-    "<input class='form-control' type='text' style='margin:5px' required>";
-  divCantidad.childNodes[0].value = cantidad;
-}
-function agregarInputNombre(elemento) {
-  var divNombre = document.getElementById("nombre-" + elemento);
-  var productName = divNombre.childNodes[0].nodeValue;
-  divNombre.childNodes[0].remove();
-  divNombre.innerHTML =
-    "<input class='form-control' type='text' style='margin:5px' required>";
-  divNombre.childNodes[0].value = productName;
-}
-
-function guardarCambios(elemento) {
-  console.log("guardando cambios!");
+function eliminarElemento(elemento) {
+  console.log("eliminando", elemento);
 }
