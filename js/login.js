@@ -1,3 +1,31 @@
+function cargaInicio(){
+
+  var uActual = window.localStorage.getItem("uActual");
+  
+  switch(uActual){
+    case 'c':
+      console.log("cliente");
+      $("#slider").load("./html/perfil_usuario.html");
+      break;
+
+    case 'e':
+      console.log("encargado");
+      $("#slider").load("./html/inicio_encargado.html");
+      break;
+
+    case 't':
+      console.log("trabajador");
+      $("#slider").load("./html/ver_pedidos.html");
+      break;
+    
+    default:
+      console.log("default");
+      break;
+  }
+  $(".breadcrumb-item").remove();
+  $("#breadcrumb").append("<li class='breadcrumb-item'>Inicio</li>");
+}
+
 function ingresar() {
   var usuarios = JSON.parse(window.localStorage.getItem("datos")).usuarios;
   var user = $("#user").val();
@@ -10,6 +38,7 @@ function ingresar() {
   }
   else{
     if (usuario.clave == pass){
+      window.localStorage.setItem("uActual", usuario.clave.charAt(usuario.clave.length-1));
       $("#breadcrumb").show();
       cargaInicio();
       $("#image-header").hide();
@@ -22,6 +51,11 @@ function ingresar() {
       $("#wrong-pass").show("");
     }
   }
+}
+
+function salir(){
+  window.localStorage.removeItem("uActual");
+  location.reload(true);
 }
 
 function cargaNuevoPedido(){
@@ -43,11 +77,6 @@ function cargaVentas(){
   $("#slider").load("./html/hacer_venta.html");
   $(".breadcrumb-item").remove();
   $("#breadcrumb").append("<li class='breadcrumb-item'><a href='#' onclick='cargaInicio();'>Inicio</a></li><li class='breadcrumb-item' aria-current='page'>Ventas</li>");
-}
-function cargaInicio(){
-  $("#slider").load("./html/inicio_encargado.html");
-  $(".breadcrumb-item").remove();
-  $("#breadcrumb").append("<li class='breadcrumb-item'>Inicio</li>");
 }
 function cargaPerfil(){
   $("#slider").load("./html/perfil_usuario.html");

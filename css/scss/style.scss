@@ -31,9 +31,11 @@ body{
       padding: 0px 25px;
 
       #nav-list{
-        margin-right: 2.3em;
-
-        i{ margin-right: 0.15em;}
+        width: 100%;
+        justify-content: space-around;
+        .nav-item{
+          margin: 0px 15px;
+        }
       }
     }
   }
