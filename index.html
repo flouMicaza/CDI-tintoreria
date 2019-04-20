@@ -25,6 +25,7 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme|Bree+Serif|Fresca">
 
     <!-- Enlazamos los scripts necesarios -->
     <script type="text/javascript" src="./js/carga.js"></script>
@@ -32,12 +33,6 @@
     <script type="text/javascript" src="./js/inicio_encargado.js"></script>
 
     <script type="text/javascript" src="./js/control_stock.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script
@@ -66,7 +61,7 @@
         </p>
       </h1>
 
-      <nav id="menu-nav" class="navbar navbar-expand-md navbar-light" style="display:none">
+      <nav id="menu-nav" class="navbar navbar-expand-lg navbar-light" style="display:none">
         <a class="navbar-brand" href="#" onclick="cargaInicio();">
           <img id="image-nav" src="./assets/img/washing-machine.svg" width="55" height="55" class="d-inline-block" alt="">
           <label for="image-nav"> Tintorería Politécnica</label>
@@ -100,7 +95,7 @@
                 Ventas
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="logout">
               <a id="usuario-actual" class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="Cerrar sesión" onclick="salir();">
                 <img src="../assets/img/svg/exit.svg" height="25">
               </a>

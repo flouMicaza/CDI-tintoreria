@@ -1,3 +1,8 @@
+/*
+font-family: 'Acme', sans-serif;
+font-family: 'Fresca', sans-serif;
+font-family: 'Bree Serif', serif;
+*/
 body {
   background: #e0ebfc;
 }
@@ -21,15 +26,25 @@ body header h1 #image-header img {
 }
 body header h1 #title-header {
   margin: 0px 15px;
+  color: #fff;
+  font-family: "Fresca", sans-serif;
 }
 body header #menu-nav {
   align-content: center;
   width: inherit;
   padding: 0px 25px;
 }
+body header #menu-nav label {
+  color: #fff;
+  font-family: "Fresca", sans-serif;
+  font-size: 1.2em;
+}
+body header #menu-nav .navbar-brand {
+  margin-right: 5px;
+}
 body header #menu-nav #nav-list {
   width: 100%;
-  justify-content: space-around;
+  justify-content: center;
 }
 body header #menu-nav #nav-list .nav-item {
   margin: 5px 15px;
@@ -41,6 +56,13 @@ body header #menu-nav #nav-list .nav-item {
 body header #menu-nav #nav-list .nav-item .nav-link {
   padding-left: 10px;
   padding-right: 10px;
+  color: #fff;
+}
+body header #menu-nav #nav-list .nav-item .nav-link:hover {
+  color: #007bff;
+}
+body header #menu-nav #nav-list #logout {
+  margin-left: auto;
 }
 body .breadcrumb {
   background-color: transparent;
@@ -48,14 +70,22 @@ body .breadcrumb {
   margin: 0px 50px 0px 20px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   #navbarNavDropdown {
     width: auto;
   }
+
+  #logout {
+    margin-left: 15px;
+  }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   #navbarNavDropdown {
     width: 100%;
+  }
+
+  .nav-link {
+    text-align: center;
   }
 }
 

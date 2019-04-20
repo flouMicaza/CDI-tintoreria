@@ -6,9 +6,11 @@ function cargaInicio(){
     case 'c':
       $("#slider").load("./html/perfil_usuario.html");
       $(".activ").hide();
-      $("#navbarNavDropdown").removeClass("collapse navbar-collapse");
+      //$("#navbarNavDropdown").removeClass("collapse navbar-collapse");
       $("#nav-list").css("justify-content","flex-end");
-      $("#button-collapse").hide();
+      $("#logout").css("margin-right","0px");
+      $(".navbar-brand").css("margin-right","0px");
+      //$("#button-collapse").hide();
       break;
 
     case 'e':
@@ -18,9 +20,10 @@ function cargaInicio(){
     case 't':
       $("#slider").load("./html/ver_pedidos.html");
       $(".activ").hide();
-      $("#navbarNavDropdown").removeClass("collapse navbar-collapse");
+      //$("#navbarNavDropdown").removeClass("collapse navbar-collapse");
       $("#nav-list").css("justify-content","flex-end");
-      $("#button-collapse").hide();
+      $("#logout").css("margin-right","0px");
+      //$("#button-collapse").hide();
       break;
     
     default:

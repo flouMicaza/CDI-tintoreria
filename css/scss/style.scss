@@ -1,5 +1,10 @@
 @import "./colors.scss";
 
+/*
+font-family: 'Acme', sans-serif;
+font-family: 'Fresca', sans-serif;
+font-family: 'Bree Serif', serif;
+*/
 body{
   background: $gray-background;
   
@@ -22,7 +27,11 @@ body{
           height: 65px;
         }
       }
-      #title-header{ margin: 0px 15px; } 
+      #title-header{
+        margin: 0px 15px; 
+        color: $white-text;
+        font-family: 'Fresca', sans-serif;
+      } 
     }
 
     #menu-nav{
@@ -30,9 +39,16 @@ body{
       width: inherit;
       padding: 0px 25px;
 
+      label{
+        color: $white-text;
+        font-family: 'Fresca', sans-serif;
+        font-size: 1.2em;
+      }
+      .navbar-brand{ margin-right: 5px;}
+
       #nav-list{
         width: 100%;
-        justify-content: space-around;
+        justify-content: center;
         .nav-item{
           margin: 5px 15px;
           border-style: groove;
@@ -43,7 +59,14 @@ body{
           .nav-link{
             padding-left: 10px;
             padding-right: 10px;
+            color: $white-text;
           }
+          .nav-link:hover{
+            color: #007bff;
+          }
+        }
+        #logout{ 
+          margin-left: auto;
         }
       }
     }
@@ -55,13 +78,12 @@ body{
   }
 }
 
-@media screen and (max-width: 767px) {
-  #navbarNavDropdown{
-    width: auto;
-  }
+@media screen and (max-width: 991px) {
+  #navbarNavDropdown{ width: auto; }
+  #logout{ margin-left: 15px; }
+  
 }
-@media screen and (min-width: 768px) {
-  #navbarNavDropdown{
-    width: 100%;
-  }
+@media screen and (min-width: 992px) {
+  #navbarNavDropdown{ width: 100%; }
+  .nav-link{ text-align: center;}
 }
