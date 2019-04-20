@@ -32,7 +32,6 @@ body header h1 #title-header {
 body header #menu-nav {
   align-content: center;
   width: inherit;
-  padding: 0px 25px;
 }
 body header #menu-nav label {
   color: #fff;
@@ -86,6 +85,21 @@ body .breadcrumb {
 
   .nav-link {
     text-align: center;
+  }
+}
+@media screen and (min-width: 577px) {
+  #menu-nav {
+    padding: 0px 25px;
+  }
+}
+@media screen and (max-width: 576px) {
+  #button-collapse {
+    margin-left: 0px;
+    font-size: 0.9em;
+  }
+
+  #menu-nav {
+    padding: 0px 10px;
   }
 }
 

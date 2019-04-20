@@ -37,7 +37,6 @@ body{
     #menu-nav{
       align-content: center;
       width: inherit;
-      padding: 0px 25px;
 
       label{
         color: $white-text;
@@ -86,4 +85,21 @@ body{
 @media screen and (min-width: 992px) {
   #navbarNavDropdown{ width: 100%; }
   .nav-link{ text-align: center;}
+}
+
+
+@media screen and (min-width: 577px){
+  #menu-nav{
+    padding: 0px 25px;
+  }
+}
+
+@media screen and (max-width: 576px){
+  #button-collapse{
+    margin-left: 0px;
+    font-size: 0.9em;
+  }
+  #menu-nav{
+    padding: 0px 10px;
+  }
 }
