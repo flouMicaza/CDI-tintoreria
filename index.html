@@ -67,40 +67,40 @@
       </h1>
 
       <nav id="menu-nav" class="navbar navbar-expand-md navbar-light" style="display:none">
-        <a class="navbar-brand" href="#" style="hoover">
+        <a class="navbar-brand" href="#" onclick="cargaInicio();">
           <img id="image-nav" src="./assets/img/washing-machine.svg" width="55" height="55" class="d-inline-block" alt="">
           <label for="image-nav"> Tintorería Politécnica</label>
         </a>
-        <button class="navbar-toggler bg-light ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button id="button-collapse" class="navbar-toggler bg-light ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul id="nav-list" class="navbar-nav">
-            <li class="nav-item active">
+            <li class="nav-item activ">
               <a class="nav-link" href="#" onclick="cargaNuevoPedido();">
                 <img src="../assets/img/svg/new-clothes.svg" height="25">
                 Nuevo pedido
               </a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item activ">
               <a class="nav-link" href="#" onclick="cargaStock();">
                 <img src="../assets/img/svg/warehouse.svg" height="25">
                 Stock
               </a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item activ">
               <a class="nav-link" href="#" onclick="cargaPedidos();">
                 <img src="../assets/img/svg/stock.svg" height="25">
                 Pedidos
               </a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item activ">
               <a class="nav-link" href="#" onclick="cargaVentas();">
                 <img src="../assets/img/svg/money.svg" height="25">
                 Ventas
               </a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a id="usuario-actual" class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="Cerrar sesión" onclick="salir();">
                 <img src="../assets/img/svg/exit.svg" height="25">
               </a>

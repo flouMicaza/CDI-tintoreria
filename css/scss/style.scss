@@ -35,6 +35,15 @@ body{
         justify-content: space-around;
         .nav-item{
           margin: 0px 15px;
+          border-style: groove;
+          border-radius: 10px;
+          border-color: $blue-button;
+          border-width: 0.1em;
+
+          .nav-link{
+            padding-left: 10px;
+            padding-right: 10px;
+          }
         }
       }
     }
@@ -43,5 +52,16 @@ body{
     background-color: transparent;
     border-bottom-style: groove;
     margin: 0px 50px 0px 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #navbarNavDropdown{
+    width: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  #navbarNavDropdown{
+    width: 100%;
   }
 }

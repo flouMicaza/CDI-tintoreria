@@ -4,17 +4,18 @@ function cargaInicio(){
   
   switch(uActual){
     case 'c':
-      console.log("cliente");
       $("#slider").load("./html/perfil_usuario.html");
+      $(".activ").hide();
+      $("#navbarNavDropdown").removeClass("collapse navbar-collapse");
+      $("#nav-list").css("justify-content","flex-end");
+      $("#button-collapse").hide();
       break;
 
     case 'e':
-      console.log("encargado");
       $("#slider").load("./html/inicio_encargado.html");
       break;
 
     case 't':
-      console.log("trabajador");
       $("#slider").load("./html/ver_pedidos.html");
       break;
     
@@ -40,11 +41,11 @@ function ingresar() {
     if (usuario.clave == pass){
       window.localStorage.setItem("uActual", usuario.clave.charAt(usuario.clave.length-1));
       $("#breadcrumb").show();
-      cargaInicio();
       $("#image-header").hide();
       $("#title-header").hide();
       $("#menu-nav").show();
       $("#usuario-actual").append(usuario.nombre);
+      cargaInicio();
     }
     else{
       $("#wrong-pass").hide();
