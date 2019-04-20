@@ -42,6 +42,10 @@ function cambiarValor(elementoId, tipo) {
   cantidad = cantidadInput.lastElementChild.value;
   cantidadLabel.innerText = cantidad;
 }
+
 function eliminarElemento(elemento) {
-  console.log("eliminando", elemento);
+  $("#modalEliminarInput-" + elemento).modal("hide");
+  $("#modalEliminarLabel-" + elemento).modal("hide");
+  $("#rowLabel" + elemento).hide();
+  $("#rowInput" + elemento).hide();
 }
