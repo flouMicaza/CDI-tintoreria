@@ -32,7 +32,7 @@ body header #menu-nav #nav-list {
   justify-content: space-around;
 }
 body header #menu-nav #nav-list .nav-item {
-  margin: 0px 15px;
+  margin: 5px 15px;
   border-style: groove;
   border-radius: 10px;
   border-color: #3762cc;

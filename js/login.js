@@ -17,6 +17,10 @@ function cargaInicio(){
 
     case 't':
       $("#slider").load("./html/ver_pedidos.html");
+      $(".activ").hide();
+      $("#navbarNavDropdown").removeClass("collapse navbar-collapse");
+      $("#nav-list").css("justify-content","flex-end");
+      $("#button-collapse").hide();
       break;
     
     default:
@@ -70,7 +74,7 @@ function cargaStock(){
   $("#breadcrumb").append("<li class='breadcrumb-item'><a href='#' onclick='cargaInicio();'>Inicio</a></li><li class='breadcrumb-item' aria-current='page'>Stock</li>");
 }
 function cargaPedidos(){ 
-  $("#slider").load("./html/ver_pedidos.html");
+  $("#slider").load("./html/pedidos_trabajador.html");
   $(".breadcrumb-item").remove();
   $("#breadcrumb").append("<li class='breadcrumb-item'><a href='#' onclick='cargaInicio();'>Inicio</a></li><li class='breadcrumb-item' aria-current='page'>Pedidos</li>");
 }
