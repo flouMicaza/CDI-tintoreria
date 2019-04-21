@@ -37,7 +37,7 @@ function cargaInicio(){
 }
 
 function ingresar() {
-  var usuarios = JSON.parse(window.localStorage.getItem("datos")).usuarios;
+  var usuarios = JSON.parse(window.localStorage.getItem("usuarios")).usuarios;
   var user = $("#user").val();
   var pass = $("#password").val();
 
@@ -47,7 +47,7 @@ function ingresar() {
     alert("Usuario no existe");
   }
   else{
-    if (usuario.clave == pass){
+    if (usuario.pass == pass){
       window.localStorage.setItem("uActual", usuario.clave.charAt(usuario.clave.length-1));
       window.localStorage.setItem("usuario", JSON.stringify(usuario));
       $("#breadcrumb").show();

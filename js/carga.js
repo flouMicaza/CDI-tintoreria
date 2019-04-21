@@ -1,51 +1,59 @@
 function cargar() {
-  var datos = {
+
+  var usuarios = {
     usuarios: [
       {
         clave: "11111-c",
         nombre: "cliente1",
         telefono: "3458672855",
-        email: "cliente1@mail.com"
+        email: "cliente1@mail.com",
+        pass: "contraseña"
       },
       {
         clave: "22222-c",
         nombre: "cliente2",
         telefono: "34464562855",
-        email: "cliente2@mail.com"
+        email: "cliente2@mail.com",
+        pass: "contraseña"
       },
       {
         clave: "33333-c",
         nombre: "cliente3",
         telefono: "3458673855",
-        email: "cliente3@mail.com"
+        email: "cliente3@mail.com",
+        pass: "contraseña"
       },
       {
         clave: "44444-c",
         nombre: "cliente4",
         telefono: "34462562855",
-        email: "cliente4@mail.com"
+        email: "cliente4@mail.com",
+        pass: "contraseña"
       },
-
       {
         clave: "11111-e",
         nombre: "encargado",
         telefono: "34464562855",
-        email: "encargado@mail.com"
+        email: "encargado@mail.com",
+        pass: "contraseña"
       },
       {
         clave: "11111-t",
         nombre: "trabajador1",
         telefono: "34464562855",
-        email: "trabajador1@mail.com"
+        email: "trabajador1@mail.com",
+        pass: "contraseña"
       },
       {
         clave: "22222-t",
         nombre: "trabajador2",
         telefono: "34464562855",
-        email: "trabajador2@mail.com"
+        email: "trabajador2@mail.com",
+        pass: "contraseña"
       }
-    ],
+  ]};
 
+  var prendas = {
     prendas: [
       {
         nombre: "camiseta",
@@ -64,14 +72,16 @@ function cargar() {
         nombre: "suéter",
         tipos: ["seda", "polar", "algodón", "lino", "tipo1", "tipo2"]
       }
-    ],
+  ]};
 
+  var servicios = {
     servicios: [
       { nombre: "lavado simple" },
       { nombre: "lavado en seco" },
       { nombre: "tintado" }
-    ],
+  ]};
 
+  var articulos = {
     articulos: [
       {
         clave: "prod-1",
@@ -129,8 +139,12 @@ function cargar() {
         disponible: true,
         precio: 10
       }
-    ]
-  };
-  window.localStorage.setItem("datos", JSON.stringify(datos));
+  ]};
+
+  window.localStorage.setItem("usuarios", JSON.stringify(usuarios));
+  window.localStorage.setItem("prendas", JSON.stringify(prendas));
+  window.localStorage.setItem("servicios", JSON.stringify(servicios));
+  window.localStorage.setItem("articulos", JSON.stringify(articulos));
+
   console.log("datos cargados");
 }
