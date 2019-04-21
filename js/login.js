@@ -12,8 +12,9 @@ function cargaInicio(){
       });
       $(".activ").hide();
       $("#nav-list").css("justify-content","flex-end");
-      $("#logout").css("margin-right","0px");
+      $("#logout").css("margin-right","15px");
       $(".navbar-brand").css("margin-right","0px");
+      $(".cliente").show();
 
       break;
 
@@ -89,8 +90,14 @@ function cargaVentas(){
   $(".breadcrumb-item").remove();
   $("#breadcrumb").append("<li class='breadcrumb-item'><a href='#' onclick='cargaInicio();'>Inicio</a></li><li class='breadcrumb-item' aria-current='page'>Ventas</li>");
 }
-function cargaPerfil(){
-  $("#slider").load("./html/perfil_usuario.html");
+
+function cargaTarjeta(){
+  $("#slider").load("./html/tarjeta_usuario.html");
   $(".breadcrumb-item").remove();
-  $("#breadcrumb").append("<li class='breadcrumb-item'><a href='#' onclick='cargaInicio();'>Inicio</a></li><li class='breadcrumb-item' aria-current='page'>Perfil</li>");
+  $("#breadcrumb").append("<li class='breadcrumb-item'><a href='#' onclick='cargaInicio();'>Inicio</a></li><li class='breadcrumb-item' aria-current='page'>Mi tarjeta</li>");
+}
+function cargaPedidosCl(){
+  $("#slider").load("./html/pedidos_usuario.html");
+  $(".breadcrumb-item").remove();
+  $("#breadcrumb").append("<li class='breadcrumb-item'><a href='#' onclick='cargaInicio();'>Inicio</a></li><li class='breadcrumb-item' aria-current='page'>Mis pedidos</li>");
 }
