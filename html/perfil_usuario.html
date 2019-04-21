@@ -1,33 +1,34 @@
 <body>
-  <div class="container">
 
-    <div class="card"  onclick="vistaperfil();" id="visitar" style="width: 18rem; height: 5rem; background: #1234; margin: auto;  " >
-      <p> 
-        <img src="../assets/img/login.svg" align="center" style="padding: 10px; "  > 
-        <font size="5" style=" margin-left: 10px; ">Perfil de Usuario</font>
-      </p>
-    </div>
+  <div class="container" onload="cargarDatosUsuario();">
+    <div class="card" id="perfil">
+      <div class="card-header"> Perfil de usuario</div>
+      <img src="../assets/img/svg/user.svg" id="user-img">
 
-    <div class="card"  align="center" style="width: 18rem; height: 3rem; background: gray; margin: auto; padding-bottom: ">
-      <p class="card-text" style="padding-top: 10px;">Pedidos Pendientes</p>
-    </div>
-
-    <div class="card" style="width: 18rem; height: 6rem; background: #4444; margin:auto; padding-top: 5px;">
-      <div class="container">
-        <div>
-          <img src="../assets/img/tshirt.svg" style="max-height: 35px; max-width: 35px; margin-left: 30px, margin-top: 30px;" align="left">
-          <div align="center"> 
-            Codigo Pedido: 1234
-          </div>
-          <div class="card-text" align="center" >
-            Estado: Lavando 
-            <div class="box"  align="center" style=" margin-left: 225px; height: 20px; width: 45px; background-color: white;"> 
-              20€
-            </div>
-          </div>
+      <div class="card-body">
+        
+        <div class="info" id="div-name">
+          <span class="info-icon"><i class="fa fa-user"></i> </span>
+          <p class="card-text info-user" id="user-name">  </p>
         </div>
-      </div>    
+
+        <div class="info" id="div-email">
+          <span class="info-icon"><i class="fa fa-at"></i> </span>
+          <p class="card-text info-user" id="user-email"> </p>
+        </div>
+
+        <div class="info" id="div-phone">
+          <span class="info-icon"><i class="fa fa-phone"></i> </span>
+          <p class="card-text info-user" id="user-phone"> </p>
+        </div>
+
+        <a href="#" class="btn btn-primary" id="edit-info" onclick="editarDatos();"> Editar datos </a>
+        <div id="save-info" style="display:none;">
+          <a href="#" class="btn btn-secondary"  onclick="noEditar();"> Cancelar </a>
+          <a href="#" class="btn btn-primary" onclick="guardarDatos();"> Guardar </a>
+        </div>
+      </div>
     </div>
-    
   </div>
+
 </body>

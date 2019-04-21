@@ -1,0 +1,36 @@
+#perfil {
+  background: rgba(55, 97, 204, 0.144);
+}
+#perfil #user-img {
+  width: 35%;
+  align-self: center;
+  padding-top: 1em;
+}
+#perfil .card-body {
+  display: flex;
+  flex-direction: column;
+}
+#perfil .card-body .info {
+  display: flex;
+  margin-bottom: 1em;
+}
+#perfil .card-body .info .info-user {
+  background: #fff;
+  width: 80%;
+  padding: 0.45em;
+}
+#perfil .card-body .info .info-icon {
+  padding: 0.375rem 0.75rem;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+#perfil .card-body a {
+  align-self: flex-end;
+  margin-top: 20px;
+}
+#perfil .card-body #save-info {
+  align-self: flex-end;
+}
+
+/*# sourceMappingURL=perfil_usuario.css.map */

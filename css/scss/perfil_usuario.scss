@@ -1,0 +1,39 @@
+@import "./colors.scss";
+
+#perfil{
+  background: $blue-cards;
+
+  #user-img{
+    width: 35%;
+    align-self: center;
+    padding-top: 1em;
+  }
+
+  .card-body{
+    display: flex;
+    flex-direction: column;
+    .info{
+      display: flex;
+      margin-bottom: 1em;
+      .info-user{
+        background: $white-text;
+        width: 80%;
+        padding: 0.45em;
+      }
+      .info-icon{
+        padding: .375rem .75rem;
+        background-color: #e9ecef;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+      }      
+    }
+
+    a{
+      align-self: flex-end;
+      margin-top: 20px;
+    }
+    #save-info{
+      align-self: flex-end;
+    }
+  }
+}

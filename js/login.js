@@ -1,16 +1,20 @@
 function cargaInicio(){
 
   var uActual = window.localStorage.getItem("uActual");
+  var usuario = JSON.parse(window.localStorage.getItem("usuario"));
   
   switch(uActual){
     case 'c':
-      $("#slider").load("./html/perfil_usuario.html");
+      $("#slider").load("./html/perfil_usuario.html", function(){
+        $("#user-name").append(usuario.nombre);
+        $("#user-email").append(usuario.email);
+        $("#user-phone").append(usuario.telefono);
+      });
       $(".activ").hide();
-      //$("#navbarNavDropdown").removeClass("collapse navbar-collapse");
       $("#nav-list").css("justify-content","flex-end");
       $("#logout").css("margin-right","0px");
       $(".navbar-brand").css("margin-right","0px");
-      //$("#button-collapse").hide();
+
       break;
 
     case 'e':
@@ -20,10 +24,8 @@ function cargaInicio(){
     case 't':
       $("#slider").load("./html/ver_pedidos.html");
       $(".activ").hide();
-      //$("#navbarNavDropdown").removeClass("collapse navbar-collapse");
       $("#nav-list").css("justify-content","flex-end");
       $("#logout").css("margin-right","0px");
-      //$("#button-collapse").hide();
       break;
     
     default:
@@ -47,6 +49,7 @@ function ingresar() {
   else{
     if (usuario.clave == pass){
       window.localStorage.setItem("uActual", usuario.clave.charAt(usuario.clave.length-1));
+      window.localStorage.setItem("usuario", JSON.stringify(usuario));
       $("#breadcrumb").show();
       $("#image-header").hide();
       $("#title-header").hide();
