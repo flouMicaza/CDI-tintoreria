@@ -24,7 +24,7 @@
     <div class="row">
       <div class="col-2 columna">
         1224
-      </div>
+      </div>  
       <div class="col-2 columna">
         Falda
       </div>
@@ -32,31 +32,28 @@
         Lavado Completo
         </div>
       <div class="col-2 columna opciones">
-        Lavando
+        Lavando <img src="../assets/img/svg/washing-machine.svg" width="20" />
       </div>
       <div class="col-2 columna">
         
 
          <select name="tipo_prenda" id="tipo_prenda"  class="form-control">
-            
-         
+
             <option value="camiseta">Lavando</option>
             <option value="camisa">Secando</option>
             <option value="pantalon">En Espera</option>
             <option value="falda">Finalizado</option>
-        
-          
 
           </select>
           
         </div>
         <div class="col-2 columna">
-        <button class="btn btn-primary" data-toggle="collapse" data-target="#demo" aria-expanded="false" aria-controls"demo">Contactar Cliente</button>
+        <button class="btn btn-primary" data-toggle="collapse" data-target="#pedido-1" aria-expanded="false" aria-controls"demo">Contactar Cliente</button>
       </div>
       </div>
       <div class="row">
-    <div class="col-12 columna sms">
-    <div id="demo" class="collapse ">
+    <div class="col-12 columna ">
+    <div id="pedido-1" class="collapse sms">
          
       <label for="obs">Introduzca aquí su mensaje</label>
             <textarea name="idc" id="obs" class="form-control"></textarea>
@@ -65,6 +62,51 @@
     </div>
       </div>
     </div>
+        <div class="row">
+          <div class="col-2 columna">
+            1224
+          </div>
+          <div class="col-2 columna">
+            Falda
+          </div>
+          <div class="col-2 columna">
+            Lavado Completo
+          </div>
+          <div class="col-2 columna opciones">
+            Secando <img src="../assets/img/svg/tumble-dryer.svg" width="20" />
+          </div>
+          <div class="col-2 columna">
+        
+        
+            <select name="tipo_prenda" id="tipo_prenda" class="form-control">
+        
+              <option value="camisa">Secando</option>
+              <option value="camiseta">Lavando</option>
+              
+              <option value="pantalon">En Espera</option>
+              <option value="falda">Finalizado</option>
+        
+        
+        
+            </select>
+        
+          </div>
+          <div class="col-2 columna">
+            <button class="btn btn-primary" data-toggle="collapse" data-target="#pedido-2" aria-expanded="false"
+              aria-controls"demo">Contactar Cliente</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 columna ">
+            <div id="pedido-2" class="collapse sms">
+        
+              <label for="obs">Introduzca aquí su mensaje</label>
+              <textarea name="idc" id="obs" class="form-control"></textarea>
+              <div style="margin-top:10px; text-align: right"><button class="btn btn-primary"> Enviar SMS</button></div>
+        
+            </div>
+          </div>
+        </div>
     </div>
     
     
