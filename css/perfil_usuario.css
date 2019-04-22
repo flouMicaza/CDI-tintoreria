@@ -38,6 +38,8 @@
 }
 #tarjeta-usuario .card-body {
   display: flex;
+  border-bottom-color: #3762cc;
+  border-bottom-style: ridge;
 }
 #tarjeta-usuario #div-img {
   width: 25%;
@@ -45,6 +47,10 @@
 }
 #tarjeta-usuario #div-img #img-tarjeta {
   width: 100%;
+}
+#tarjeta-usuario .card-footer {
+  font-size: x-small;
+  align-self: center;
 }
 
 /*# sourceMappingURL=perfil_usuario.css.map */

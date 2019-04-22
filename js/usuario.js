@@ -59,7 +59,7 @@ function cargaTarjeta(){
     var tarjeta = tarjetas.find(x => x.cliente == usuario.clave);
 
     $("#name-tarjeta").append(usuario.nombre);
-    $("#clave-tarjeta").append(usuario.clave);
+    $("#clave-tarjeta").append("No. cliente: "+usuario.clave);
 
     if(tarjeta === undefined){
       $("#num-card").append("No cuentas con una tarjeta de fidelidad");
@@ -67,6 +67,7 @@ function cargaTarjeta(){
     else{
       $("#num-card").append("No. tarjeta: "+tarjeta.numero);
       $("#puntos-card").append("Puntos acumulados: "+tarjeta.puntos);
+      $("#tarjeta-usuario").append("<div class='card-footer'> ¡Con tus puntos puedes obtener descuentos y productos gratis!</div>");
     }
   });
 

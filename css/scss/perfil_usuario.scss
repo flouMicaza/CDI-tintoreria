@@ -41,13 +41,21 @@
 #tarjeta-usuario{
   background: $blue-cards;
 
-  .card-body{display: flex;}
+  .card-body{
+    display: flex;
+    border-bottom-color: $dark-blue;
+    border-bottom-style: ridge; 
+  }
   #div-img{
     width: 25%;
     margin-right: 1em;
     #img-tarjeta{
       width: 100%;
     }
+  }
+  .card-footer{
+    font-size: x-small;
+    align-self: center;
   }
 
 }
