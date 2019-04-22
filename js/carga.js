@@ -153,6 +153,16 @@ function cargar() {
       },
       {
         numero: "2222",
+        cliente: "22222-c",
+        puntos: 100
+      },
+      {
+        numero: "3333",
+        cliente: "33333-c",
+        puntos: 0
+      },
+      {
+        numero: "4444",
         cliente: "44444-c",
         puntos: 12
       }
