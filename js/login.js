@@ -10,9 +10,9 @@ function cargaInicio() {
         $("#user-phone").append(usuario.telefono);
       });
       $(".activ").hide();
-      $("#nav-list").css("justify-content", "flex-end");
-      $("#logout").css("margin-right", "15px");
-      $(".navbar-brand").css("margin-right", "0px");
+      $("#nav-list").css("justify-content","flex-end");
+      $("#logout").css("margin-right","15px");
+      $(".navbar-brand").css("margin-right","0px");
       $(".cliente").show();
 
       break;
@@ -57,6 +57,10 @@ function ingresar() {
       $("#title-header").hide();
       $("#menu-nav").show();
       $("#usuario-actual").append(usuario.nombre);
+      setCookie("nombre", usuario.nombre);
+      setCookie("telefono", usuario.telefono);
+      setCookie("email", usuario.email);
+
       cargaInicio();
     } else {
       $("#wrong-pass").hide();
@@ -67,6 +71,10 @@ function ingresar() {
 
 function salir() {
   window.localStorage.removeItem("uActual");
+  window.localStorage.removeItem("usuario");
+  setCookie("nombre", "");
+  setCookie("telefono", "");
+  setCookie("email", "");
   location.reload(true);
 }
 
@@ -94,9 +102,7 @@ function cargaPedidos() {
   );
 }
 function cargaVentas() {
-  $("#slider").load("./html/inicio_ventas.html", function() {
-    $("#modalCliente").modal();
-  });
+  $("#slider").load("./html/hacer_venta.html");
   $(".breadcrumb-item").remove();
   $("#breadcrumb").append(
     "<li class='breadcrumb-item'><a href='#' onclick='cargaInicio();'>Inicio</a></li><li class='breadcrumb-item' aria-current='page'>Ventas</li>"

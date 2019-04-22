@@ -38,3 +38,33 @@ function crearCliente() {
   var nombre = $("#nombreClienteNuevo").val();
   mostrarCliente(nombre);
 }
+
+function cargarSelects() {
+  $(".option-selected").html(" -- Seleccionar --");
+
+  $(".select").on("click", function () {
+    if ($(this).children(".option").css("display") == "none") {
+      $(this).children(".option").css("display", "block");
+      $(this).children(".hr").css("display", "block");
+      // $(".option-selected").css("padding-bottom","10px");
+      $(this).children(".arrow").css("color", "blue");
+      $(this).css("z-index", "999");
+    }
+    else {
+      $(".option").css("display", "none");
+      $(".hr").css("display", "none");
+      $(".option-selected").css("padding-bottom", "5px");
+      $(".arrow").css("color", "black");
+      $(this).css("z-index", "0");
+    }
+  });
+
+  $(".option").on("click", function () {
+    if ($(".option").attr("data") != "undefined") {
+      $(this).parent().children(".option-selected").html($(this).html());
+      $(".option").removeAttr("data");
+      $(this).attr("data", "selected");
+      $(this).parent().children("select").attr("value", $(this).attr("value"));
+    }
+  });
+}

@@ -1,208 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Tintorería Politécnica</title>
 
-    <!--Enlazamos las hojas de estilo aplicando primero el normalizador-->
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <link rel="stylesheet" type="text/css" href="./css/style-login.css" />
-    <link rel="stylesheet" type="text/css" href="./css/inicio_encargado.css" />
-    <link rel="stylesheet" type="text/css" href="./css/perfil_usuario.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Tintorería Politécnica</title>
 
-    <link rel="stylesheet" type="text/css" href="./css/hacer_venta.css" />
+  <!--Enlazamos las hojas de estilo aplicando primero el normalizador-->
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  <link rel="stylesheet" type="text/css" href="./css/style-login.css" />
+  <link rel="stylesheet" type="text/css" href="./css/inicio_encargado.css" />
+  <link rel="stylesheet" type="text/css" href="./css/perfil_usuario.css" />
 
-    <link rel="stylesheet" type="text/css" href="./css/tablas.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Acme|Bree+Serif|Fresca"
-    />
+  <link rel="stylesheet" type="text/css" href="./css/hacer_venta.css" />
 
-    <!-- Enlazamos los scripts necesarios -->
-    <script type="text/javascript" src="./js/carga.js"></script>
-    <script type="text/javascript" src="./js/login.js"></script>
-    <script type="text/javascript" src="./js/inicio_encargado.js"></script>
-    <script type="text/javascript" src="./js/usuario.js"></script>
-    <script type="text/javascript" src="./js/control_stock.js"></script>
-    <script type="text/javascript" src="./js/nuevo_pedido.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/tablas.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme|Bree+Serif|Fresca" />
 
-    <script type="text/javascript" src="./js/hacer_venta.js"></script>
+  <!-- Enlazamos los scripts necesarios -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      $(document).ready(function() {
-        $("#slider").load("./html/login.html");
-        cargar();
-      });
-    </script>
-  </head>
-  <body>
-    <header>
-      <h1 id="all-header">
-        <div id="image-header">
-          <img
-            src="./assets/img/washing-machine.svg"
-            alt="Tintorería Politécnica"
-          />
-        </div>
-        <p id="title-header">
-          Tintorería Politécnica
-        </p>
-      </h1>
+  <script type="text/javascript" src="./js/carga.js"></script>
+  <script type="text/javascript" src="./js/login.js"></script>
+  <script type="text/javascript" src="./js/inicio_encargado.js"></script>
+  <script type="text/javascript" src="./js/usuario.js"></script>
+  <script type="text/javascript" src="./js/control_stock.js"></script>
+  <script type="text/javascript" src="./js/nuevo_pedido.js"></script>
+  <script type="text/javascript" src="./js/funciones_cookies.js"></script>
 
-      <nav
-        id="menu-nav"
-        class="navbar navbar-expand-lg navbar-light"
-        style="display:none"
-      >
-        <a class="navbar-brand" href="#" onclick="cargaInicio();">
-          <img
-            id="image-nav"
-            src="./assets/img/washing-machine.svg"
-            width="55"
-            height="55"
-            class="d-inline-block"
-            alt=""
-          />
-          <label for="image-nav"> Tintorería Politécnica</label>
-        </a>
-        <button
-          id="button-collapse"
-          class="navbar-toggler bg-light ml-auto"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul id="nav-list" class="navbar-nav">
-            <li
-              class="nav-item activ"
-              data-toggle="collapse"
-              data-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <a class="nav-link" href="#" onclick="cargaNuevoPedido();">
-                <img src="../assets/img/svg/new-clothes.svg" height="25" />
-                Nuevo pedido
-              </a>
-            </li>
-            <li
-              class="nav-item activ"
-              data-toggle="collapse"
-              data-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <a class="nav-link" href="#" onclick="cargaStock();">
-                <img src="../assets/img/svg/warehouse.svg" height="25" />
-                Stock
-              </a>
-            </li>
-            <li
-              class="nav-item activ"
-              data-toggle="collapse"
-              data-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <a class="nav-link" href="#" onclick="cargaPedidos();">
-                <img src="../assets/img/svg/stock.svg" height="25" />
-                Pedidos
-              </a>
-            </li>
-            <li
-              class="nav-item activ"
-              data-toggle="collapse"
-              data-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <a class="nav-link" href="#" onclick="cargaVentas();">
-                <img src="../assets/img/svg/money.svg" height="25" />
-                Ventas
-              </a>
-            </li>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
-            <li
-              class="nav-item activ cliente"
-              data-toggle="collapse"
-              data-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              style="display:none;"
-            >
-              <a class="nav-link" href="#" onclick="cargaPedidosCl();">
-                <img src="../assets/img/svg/stock.svg" height="25" />
-                Mis Pedidos
-              </a>
-            </li>
-            <li
-              class="nav-item activ cliente"
-              data-toggle="collapse"
-              data-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              style="display:none;"
-            >
-              <a class="nav-link" href="#" onclick="cargaTarjeta();">
-                <img src="../assets/img/svg/membership.svg" height="25" />
-                Tarjeta de fidelidad
-              </a>
-            </li>
-            <li class="nav-item" id="logout">
-              <a
-                id="usuario-actual"
-                class="nav-link"
-                href="#"
-                data-toggle="tooltip"
-                data-placement="bottom"
-                title="Cerrar sesión"
-                onclick="salir();"
-              >
-                <img src="../assets/img/svg/exit.svg" height="25" />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+</head>
 
-    <nav aria-label="breadcrumb">
-      <ol id="breadcrumb" class="breadcrumb" style="display:none"></ol>
+<body>
+  <header>
+    <h1 id="all-header">
+      <div id="image-header">
+        <img src="./assets/img/washing-machine.svg" alt="Tintorería Politécnica" />
+      </div>
+      <p id="title-header">
+        Tintorería Politécnica
+      </p>
+    </h1>
+
+    <nav id="menu-nav" class="navbar navbar-expand-lg navbar-light" style="display:none">
+      <a class="navbar-brand" href="#" onclick="cargaInicio();">
+        <img id="image-nav" src="./assets/img/washing-machine.svg" width="55" height="55" class="d-inline-block" alt="" />
+        <label for="image-nav"> Tintorería Politécnica</label>
+      </a>
+      <button id="button-collapse" class="navbar-toggler bg-light ml-auto" type="button" data-toggle="collapse"
+        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul id="nav-list" class="navbar-nav">
+          <li class="nav-item activ" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <a class="nav-link" href="#" onclick="cargaNuevoPedido();">
+              <img src="../assets/img/svg/new-clothes.svg" height="25" />
+              Nuevo pedido
+            </a>
+          </li>
+          <li class="nav-item activ" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <a class="nav-link" href="#" onclick="cargaStock();">
+              <img src="../assets/img/svg/warehouse.svg" height="25" />
+              Stock
+            </a>
+          </li>
+          <li class="nav-item activ" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <a class="nav-link" href="#" onclick="cargaPedidos();">
+              <img src="../assets/img/svg/stock.svg" height="25" />
+              Pedidos
+            </a>
+          </li>
+          <li class="nav-item activ" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <a class="nav-link" href="#" onclick="cargaVentas();">
+              <img src="../assets/img/svg/money.svg" height="25" />
+              Ventas
+            </a>
+          </li>
+
+          <li class="nav-item activ cliente" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+            aria-expanded="false" aria-label="Toggle navigation" style="display:none;">
+            <a class="nav-link" href="#" onclick="cargaPedidosCl();">
+              <img src="../assets/img/svg/stock.svg" height="25" />
+              Mis Pedidos
+            </a>
+          </li>
+          <li class="nav-item activ cliente" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+            aria-expanded="false" aria-label="Toggle navigation" style="display:none;">
+            <a class="nav-link" href="#" onclick="cargaTarjeta();">
+              <img src="../assets/img/svg/membership.svg" height="25" />
+              Tarjeta de fidelidad
+            </a>
+          </li>
+          <li class="nav-item" id="logout">
+            <a id="usuario-actual" class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="Cerrar sesión"
+              onclick="salir();">
+              <img src="../assets/img/svg/exit.svg" height="25" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
+  </header>
 
-    <div id="slider"></div>
-  </body>
+  <nav aria-label="breadcrumb">
+    <ol id="breadcrumb" class="breadcrumb" style="display:none"></ol>
+  </nav>
+
+  <div id="slider"></div>
+  <script>
+    $(document).ready(function () {
+      var user_login = JSON.parse(localStorage.getItem("usuario"));
+      if (user_login != null) {
+        var usuario_nombre = user_login.nombre;
+        var username = user_login.clave.substr(user_login.clave.length - 1);
+      }
+        if (username == "c" || username == "e" || username == "t") {
+          $("#breadcrumb").show();
+          $("#image-header").hide();
+          $("#title-header").hide();
+          $("#menu-nav").show();
+          $("#usuario-actual").append(usuario_nombre);
+          $("#breadcrumb").append("<li class='breadcrumb-item'>Inicio</li>");
+        }
+
+        if (username == "c") {
+          $("#slider").load("./html/perfil_usuario.html", function () {
+            $("#user-name").append(getCookie("nombre"));
+            $("#user-email").append(getCookie("email"));
+            $("#user-phone").append(getCookie("telefono"));
+          });
+          $(".activ").hide();
+          $("#nav-list").css("justify-content", "flex-end");
+          $("#logout").css("margin-right", "15px");
+          $(".navbar-brand").css("margin-right", "0px");
+          $(".cliente").show();
+
+        }
+        else if (username == "e") {
+          $("#slider").load("./html/inicio_encargado.html");
+        }
+        else if (username == "t") {
+          $("#slider").load("./html/ver_pedidos.html");
+          $(".activ").hide();
+          $("#nav-list").css("justify-content", "flex-end");
+          $("#logout").css("margin-right", "0px");
+        }
+        else {
+          $("#slider").load("./html/login.html");
+          cargar();
+        }
+      
+    });
+  </script>
+</body>
+
 </html>
