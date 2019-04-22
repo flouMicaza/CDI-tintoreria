@@ -72,11 +72,72 @@ function cargaTarjeta(){
   });
 
   $(".breadcrumb-item").remove();
-  $("#breadcrumb").append("<li class='breadcrumb-item'><a href='#' onclick='cargaInicio();'>Inicio</a></li><li class='breadcrumb-item' aria-current='page'>Mi tarjeta</li>");
+  $("#breadcrumb").append("<li class='breadcrumb-item'><a href='#' onclick='cargaInicio();'>Perfil</a></li><li class='breadcrumb-item' aria-current='page'>Mi tarjeta</li>");
 }
 
 function cargaPedidosCl(){
-  $("#slider").load("./html/pedidos_usuario.html");
+  $("#slider").load("./html/pedidos_usuario.html", function(){
+    var usuario = JSON.parse(window.localStorage.getItem("usuario"));
+    var pedidos = JSON.parse(window.localStorage.getItem("pedidos")).pedidos;
+    var mensajes = JSON.parse(window.localStorage.getItem("mensajes")).mensajes;
+
+    $("#name-tarjeta").append(usuario.nombre);
+    $("#clave-tarjeta").append("No. cliente: "+usuario.clave);
+
+    $.each(pedidos, function(index, pedido){
+      if (pedido.cliente == usuario.clave){
+        $("#pedidos").append("<li class='list-group-item'><div id='"+pedido.codigo+"' class='card-body'><div class='img-prenda'><img src='"+pedido.img+"'>"+pedido.prenda+"</div><div class='info-pedido'><p>No. Pedido: "+pedido.codigo+"</p><p>Estado: "+pedido.estado+"</p><p class='precio'>"+pedido.precio+" €</p></div></div></li>");
+      }
+    });
+
+    $.each(mensajes, function(index, mensaje){
+      if (mensaje.cliente == usuario.clave){
+        $("#"+mensaje.pedido).append("<div><a href='#' onclick='mostrarMensaje("+mensaje.pedido+");' class='badge badge-info alert-pedido' data-toggle='modal' data-target='#modalMensaje'>!</a></div>");
+      }
+    });
+
+  });
   $(".breadcrumb-item").remove();
-  $("#breadcrumb").append("<li class='breadcrumb-item'><a href='#' onclick='cargaInicio();'>Inicio</a></li><li class='breadcrumb-item' aria-current='page'>Mis pedidos</li>");
+  $("#breadcrumb").append("<li class='breadcrumb-item'><a href='#' onclick='cargaInicio();'>Perfil</a></li><li class='breadcrumb-item' aria-current='page'>Mis pedidos</li>");
+}
+
+function mostrarMensaje(pedido){
+  var mensajes = JSON.parse(window.localStorage.getItem("mensajes")).mensajes;
+  var mensaje = mensajes.find(x => x.pedido == pedido);
+
+  $("#texto-mensaje").prepend(mensaje.texto+"<p id='precio-mensaje'> Costo: "+mensaje.costo+" €</p>");
+  $("#exampleModalLabel").append("No. Pedido: "+mensaje.pedido);
+}
+
+function descartarMensaje(){
+  $("#texto-mensaje").text("");
+  $("#exampleModalLabel").text("");
+  $("#precio-mensaje").text("");
+}
+
+function aceptarMensaje(){
+  var costo = parseInt($("#precio-mensaje").html().slice(8,-2));
+  var pedido = $("#exampleModalLabel").html().slice(12);
+  var precioActual = parseInt($("#"+pedido+" .precio").html().slice(0,-2));
+  var precioNuevo = precioActual + costo;
+  var pedidos = JSON.parse(window.localStorage.getItem("pedidos")).pedidos;
+  var mensajes = JSON.parse(window.localStorage.getItem("mensajes")).mensajes;
+  var mensaje = mensajes.find(x => x.pedido == pedido);
+
+  mensajes.splice( mensajes.indexOf(mensaje), 1 );
+
+  $.each(pedidos, function(index, pedidoX){
+    if (pedidoX.codigo == pedido){
+      pedidoX.precio = precioNuevo;
+    }
+  });
+  
+  $("#"+pedido+" .precio").text(precioNuevo+" €");
+  $("#"+pedido+" .alert-pedido").hide();
+
+  window.localStorage.removeItem("pedidos");
+  window.localStorage.removeItem("mensajes");
+  window.localStorage.setItem("pedidos", JSON.stringify({pedidos:pedidos}));
+  window.localStorage.setItem("mensajes", JSON.stringify({mensajes:mensajes}));
+  descartarMensaje();
 }

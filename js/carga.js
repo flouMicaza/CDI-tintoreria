@@ -169,11 +169,78 @@ function cargar() {
     ]
   }
 
+  var pedidos = {
+    pedidos: [
+      {
+        cliente: "22222-c",
+        codigo: "15742",
+        estado: "Finalizado",
+        prenda: "Vestido",
+        img: "../assets/img/svg/dress.svg",
+        precio: 18
+      },
+      {
+        cliente: "22222-c",
+        codigo: "12831",
+        estado: "Lavando",
+        prenda: "Camisa",
+        img: "../assets/img/svg/shirt.svg",
+        precio: 25
+      },
+      {
+        cliente: "22222-c",
+        codigo: "90478",
+        estado: "Lavando",
+        prenda: "Pantalon",
+        img: "../assets/img/svg/jeans.svg",
+        precio: 13
+      },
+      {
+        cliente: "11111-c",
+        codigo: "12345",
+        estado: "Secando",
+        prenda: "Camiseta",
+        img: "../assets/img/svg/tshirt.svg",
+        precio: 8
+      },
+      {
+        cliente: "11111-c",
+        codigo: "79356",
+        estado: "En espera",
+        prenda: "Pantalón",
+        img: "../assets/img/svg/jeans.svg",
+        precio: 15
+      },
+      {
+        cliente: "44444-c",
+        codigo: "39590",
+        estado: "Secando",
+        prenda: "Falda",
+        img: "../assets/img/svg/skirt.svg",
+        precio: 25
+      }
+
+    ]
+  }
+
+  var mensajes = {
+    mensajes: [
+      {
+        cliente: "11111-c",
+        pedido: "79356",
+        texto: "El mensaje que envia el trabajador al cliente sobre su pedido",
+        costo: 5
+      }
+    ]
+  }
+
   window.localStorage.setItem("usuarios", JSON.stringify(usuarios));
   window.localStorage.setItem("prendas", JSON.stringify(prendas));
   window.localStorage.setItem("servicios", JSON.stringify(servicios));
   window.localStorage.setItem("articulos", JSON.stringify(articulos));
   window.localStorage.setItem("tarjetas", JSON.stringify(tarjetas));
+  window.localStorage.setItem("pedidos", JSON.stringify(pedidos));
+  window.localStorage.setItem("mensajes", JSON.stringify(mensajes));
 
   console.log("datos cargados");
 }
