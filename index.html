@@ -26,7 +26,10 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme|Bree+Serif|Fresca">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Acme|Bree+Serif|Fresca"
+    />
 
     <!-- Enlazamos los scripts necesarios -->
     <script type="text/javascript" src="./js/carga.js"></script>
@@ -34,6 +37,7 @@
     <script type="text/javascript" src="./js/inicio_encargado.js"></script>
     <script type="text/javascript" src="./js/usuario.js"></script>
     <script type="text/javascript" src="./js/control_stock.js"></script>
+    <script type="text/javascript" src="./js/nuevo_pedido.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script
@@ -62,59 +66,130 @@
         </p>
       </h1>
 
-      <nav id="menu-nav" class="navbar navbar-expand-lg navbar-light" style="display:none">
+      <nav
+        id="menu-nav"
+        class="navbar navbar-expand-lg navbar-light"
+        style="display:none"
+      >
         <a class="navbar-brand" href="#" onclick="cargaInicio();">
-          <img id="image-nav" src="./assets/img/washing-machine.svg" width="55" height="55" class="d-inline-block" alt="">
+          <img
+            id="image-nav"
+            src="./assets/img/washing-machine.svg"
+            width="55"
+            height="55"
+            class="d-inline-block"
+            alt=""
+          />
           <label for="image-nav"> Tintorería Politécnica</label>
         </a>
-        <button id="button-collapse" class="navbar-toggler bg-light ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          id="button-collapse"
+          class="navbar-toggler bg-light ml-auto"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul id="nav-list" class="navbar-nav">
-            <li class="nav-item activ" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <li
+              class="nav-item activ"
+              data-toggle="collapse"
+              data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
               <a class="nav-link" href="#" onclick="cargaNuevoPedido();">
-                <img src="../assets/img/svg/new-clothes.svg" height="25">
+                <img src="../assets/img/svg/new-clothes.svg" height="25" />
                 Nuevo pedido
               </a>
             </li>
-            <li class="nav-item activ" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <li
+              class="nav-item activ"
+              data-toggle="collapse"
+              data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
               <a class="nav-link" href="#" onclick="cargaStock();">
-                <img src="../assets/img/svg/warehouse.svg" height="25">
+                <img src="../assets/img/svg/warehouse.svg" height="25" />
                 Stock
               </a>
             </li>
-            <li class="nav-item activ" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <li
+              class="nav-item activ"
+              data-toggle="collapse"
+              data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
               <a class="nav-link" href="#" onclick="cargaPedidos();">
-                <img src="../assets/img/svg/stock.svg" height="25">
+                <img src="../assets/img/svg/stock.svg" height="25" />
                 Pedidos
               </a>
             </li>
-            <li class="nav-item activ" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <li
+              class="nav-item activ"
+              data-toggle="collapse"
+              data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
               <a class="nav-link" href="#" onclick="cargaVentas();">
-                <img src="../assets/img/svg/money.svg" height="25">
+                <img src="../assets/img/svg/money.svg" height="25" />
                 Ventas
               </a>
             </li>
 
-            <li class="nav-item activ cliente" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="display:none;">
+            <li
+              class="nav-item activ cliente"
+              data-toggle="collapse"
+              data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              style="display:none;"
+            >
               <a class="nav-link" href="#" onclick="cargaPedidosCl();">
-                <img src="../assets/img/svg/stock.svg" height="25">
+                <img src="../assets/img/svg/stock.svg" height="25" />
                 Mis Pedidos
               </a>
             </li>
-            <li class="nav-item activ cliente" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="display:none;">
+            <li
+              class="nav-item activ cliente"
+              data-toggle="collapse"
+              data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              style="display:none;"
+            >
               <a class="nav-link" href="#" onclick="cargaTarjeta();">
-                <img src="../assets/img/svg/membership.svg" height="25">
+                <img src="../assets/img/svg/membership.svg" height="25" />
                 Tarjeta de fidelidad
               </a>
             </li>
             <li class="nav-item" id="logout">
-              <a id="usuario-actual" class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="Cerrar sesión" onclick="salir();">
-                <img src="../assets/img/svg/exit.svg" height="25">
+              <a
+                id="usuario-actual"
+                class="nav-link"
+                href="#"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="Cerrar sesión"
+                onclick="salir();"
+              >
+                <img src="../assets/img/svg/exit.svg" height="25" />
               </a>
             </li>
-
           </ul>
         </div>
       </nav>

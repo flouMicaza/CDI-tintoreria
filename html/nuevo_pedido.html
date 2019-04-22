@@ -1,5 +1,20 @@
 <body>
   <div class="container">
+    <div
+      class="alert alert-success alert-dismissible fade show"
+      style="display:none"
+      role="alert"
+    >
+      Nuevo cliente creado con éxito!
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
     <form action=" " role="form">
       <div class="row">
         <div class="col-6" style="height:100px">
@@ -10,7 +25,8 @@
             </div>
             <div class="card-body">
               <div class="form-group">
-                <label for="tipo_prenda">Tipo de Prenda</label>
+                <label for="tipo_prenda">Tipo de Prenda</label
+                ><label class="text-danger">*</label>
 
                 <select
                   name="tipo_prenda"
@@ -28,7 +44,8 @@
                 </select>
               </div>
               <div class="form-group">
-                <label for="tipo_tela">Tipo de Tela</label>
+                <label for="tipo_tela">Tipo de Tela</label
+                ><label class="text-danger">*</label>
                 <select name="tipo_tela" id="tipo_tela" class="form-control">
                   <option value="selec">--Seleccionar--</option>
                   <option value="algodon">Algodón</option>
@@ -54,27 +71,25 @@
                 </div>
               </div>
               <div class="form-group" id="botones">
-                <label>Tipo de servicio: </label>
+                <label>Tipo de servicio: </label
+                ><label class="text-danger">*</label><br />
                 <div class="btn-group" role="group" aria-label="Basic example">
                   <input
                     type="image"
                     src="../assets/img/svg/dry-cleaning.svg"
-                    width="130px"
-                    height="130px"
+                    width="80px"
                     style="margin:7px"
                   />
                   <input
                     type="image"
                     src="../assets/img/svg/washing-machine.svg"
-                    width="130px"
-                    height="130px"
+                    width="80px"
                     style="margin:5px"
                   />
                   <input
                     type="image"
                     src="../assets/img/svg/paint-bucket.svg"
-                    width="130px"
-                    height="130px"
+                    width="80px"
                     style="margin:5px"
                   />
                 </div>
@@ -90,41 +105,57 @@
               Información del cliente
             </div>
             <div class="card-body">
-              <div class="form-group">
-                <label for="idt">ID Trabajador</label>
+              <div class="form-group" id="trabajador">
+                <label for="idt">ID Trabajador</label
+                ><label class="text-danger">*</label>
                 <input
                   type="text"
                   name="idt"
                   id="idt"
-                  placeholder="Buscar trabajador"
+                  placeholder="Ingrese trabajador"
+                  required
                   class="form-control"
                 />
               </div>
 
-              <div class="form-group">
-                <label for="idc">ID Cliente</label>
-                <input
-                  type="text"
-                  name="idc"
-                  id="idc"
-                  placeholder="Buscar cliente"
-                  class="form-control"
-                />
+              <div class="form-group" id="cliente">
+                <label for="idc">ID Cliente </label
+                ><label class="text-danger">*</label>
+                <div class="form-row">
+                  <div class="col">
+                    <input
+                      type="text"
+                      name="idc"
+                      id="idc"
+                      required
+                      placeholder="Buscar cliente"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col">
+                    <button
+                      type="button"
+                      onclick="buscarCliente();"
+                      class="btn btn-primary"
+                    >
+                      Buscar cliente
+                    </button>
+                  </div>
+                </div>
+                <div style="display: none;" id="bienvenidaCliente">
+                  <small> </small>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="otros">Trabajos Adicionales</label>
-                <input
-                  type="text"
-                  name="otros"
-                  id="otros"
-                  class="form-control"
-                />
-              </div>
-              <div class="form-group">
+
+              <div class="form-group" id="observaciones">
                 <label for="obs">Observaciones</label>
                 <textarea name="idc" id="obs" class="form-control"></textarea>
               </div>
-              <button type="button" class="btn btn-primary mb-2">
+              <button
+                type="button"
+                class="btn btn-primary mb-2"
+                id="agregarPedido"
+              >
                 Agregar pedido
               </button>
             </div>
@@ -132,5 +163,92 @@
         </div>
       </div>
     </form>
+  </div>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="modalNuevoCliente"
+    role="dialog"
+    aria-labelledby="modalRegistroLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalRegistroLabel">
+            Ingresar nuevo cliente
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="" role="form">
+            <div class="form-group" id="dniNuevo">
+              <label for="idClienteNuevo">DNI Cliente</label>
+              <input
+                type="text"
+                name="idClienteNuevo"
+                id="idClienteNuevo"
+                placeholder="11111111-1"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="form-group" id="nombreNuevo">
+              <label for="nombreClienteNuevo">Nombre y Apellidos</label>
+              <input
+                type="text"
+                name="nombreClienteNuevo"
+                id="nombreClienteNuevo"
+                placeholder="Juan Alfaro Toledo"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="form-group" id="telefonoNuevo">
+              <label for="telefonoClienteNuevo">Teléfono</label>
+              <input
+                type="text"
+                name="telefonoClienteNuevo"
+                id="telefonoClienteNuevo"
+                placeholder="34 369 255 019"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="form-group" id="mailNuevo">
+              <label for="mailClienteNuevo">Teléfono</label>
+              <input
+                type="text"
+                name="mailClienteNuevo"
+                id="mailClienteNuevo"
+                placeholder="micorreo@ejemplo.es"
+                class="form-control"
+                required
+              />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
+            Cancelar
+          </button>
+          <button
+            type="button"
+            class="btn btn-success"
+            onclick="crearCliente();"
+          >
+            Crear cliente
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
