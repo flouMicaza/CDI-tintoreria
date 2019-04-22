@@ -50,3 +50,32 @@ function guardarDatos(){
   $("#usuario-actual").text(usuario.nombre);
   $("#usuario-actual").prepend("<img src='../assets/img/svg/exit.svg' height='25'>");
 }
+
+function cargaTarjeta(){
+  $("#slider").load("./html/tarjeta_usuario.html", function(){
+
+    var usuario = JSON.parse(window.localStorage.getItem("usuario"));
+    var tarjetas = JSON.parse(window.localStorage.getItem("tarjetas")).tarjetas;
+    var tarjeta = tarjetas.find(x => x.cliente == usuario.clave);
+
+    $("#name-tarjeta").append(usuario.nombre);
+    $("#clave-tarjeta").append(usuario.clave);
+
+    if(tarjeta === undefined){
+      $("#num-card").append("No cuentas con una tarjeta de fidelidad");
+    }
+    else{
+      $("#num-card").append("No. tarjeta: "+tarjeta.numero);
+      $("#puntos-card").append("Puntos acumulados: "+tarjeta.puntos);
+    }
+  });
+
+  $(".breadcrumb-item").remove();
+  $("#breadcrumb").append("<li class='breadcrumb-item'><a href='#' onclick='cargaInicio();'>Inicio</a></li><li class='breadcrumb-item' aria-current='page'>Mi tarjeta</li>");
+}
+
+function cargaPedidosCl(){
+  $("#slider").load("./html/pedidos_usuario.html");
+  $(".breadcrumb-item").remove();
+  $("#breadcrumb").append("<li class='breadcrumb-item'><a href='#' onclick='cargaInicio();'>Inicio</a></li><li class='breadcrumb-item' aria-current='page'>Mis pedidos</li>");
+}

@@ -141,10 +141,26 @@ function cargar() {
       }
   ]};
 
+  var tarjetas = {
+    tarjetas:[
+      {
+        numero: "1111",
+        cliente: "11111-c",
+        puntos: 36
+      },
+      {
+        numero: "2222",
+        cliente: "44444-c",
+        puntos: 12
+      }
+    ]
+  }
+
   window.localStorage.setItem("usuarios", JSON.stringify(usuarios));
   window.localStorage.setItem("prendas", JSON.stringify(prendas));
   window.localStorage.setItem("servicios", JSON.stringify(servicios));
   window.localStorage.setItem("articulos", JSON.stringify(articulos));
+  window.localStorage.setItem("tarjetas", JSON.stringify(tarjetas));
 
   console.log("datos cargados");
 }

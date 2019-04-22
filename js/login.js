@@ -90,14 +90,3 @@ function cargaVentas(){
   $(".breadcrumb-item").remove();
   $("#breadcrumb").append("<li class='breadcrumb-item'><a href='#' onclick='cargaInicio();'>Inicio</a></li><li class='breadcrumb-item' aria-current='page'>Ventas</li>");
 }
-
-function cargaTarjeta(){
-  $("#slider").load("./html/tarjeta_usuario.html");
-  $(".breadcrumb-item").remove();
-  $("#breadcrumb").append("<li class='breadcrumb-item'><a href='#' onclick='cargaInicio();'>Inicio</a></li><li class='breadcrumb-item' aria-current='page'>Mi tarjeta</li>");
-}
-function cargaPedidosCl(){
-  $("#slider").load("./html/pedidos_usuario.html");
-  $(".breadcrumb-item").remove();
-  $("#breadcrumb").append("<li class='breadcrumb-item'><a href='#' onclick='cargaInicio();'>Inicio</a></li><li class='breadcrumb-item' aria-current='page'>Mis pedidos</li>");
-}

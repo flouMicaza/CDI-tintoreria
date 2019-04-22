@@ -33,4 +33,18 @@
   align-self: flex-end;
 }
 
+#tarjeta-usuario {
+  background: rgba(55, 97, 204, 0.144);
+}
+#tarjeta-usuario .card-body {
+  display: flex;
+}
+#tarjeta-usuario #div-img {
+  width: 25%;
+  margin-right: 1em;
+}
+#tarjeta-usuario #div-img #img-tarjeta {
+  width: 100%;
+}
+
 /*# sourceMappingURL=perfil_usuario.css.map */

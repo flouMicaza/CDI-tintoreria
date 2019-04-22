@@ -37,3 +37,17 @@
     }
   }
 }
+
+#tarjeta-usuario{
+  background: $blue-cards;
+
+  .card-body{display: flex;}
+  #div-img{
+    width: 25%;
+    margin-right: 1em;
+    #img-tarjeta{
+      width: 100%;
+    }
+  }
+
+}
