@@ -188,6 +188,14 @@ function cargar() {
         precio: 25
       },
       {
+        cliente: "22222-c",
+        codigo: "90478",
+        estado: "Lavando",
+        prenda: "Pantalon",
+        img: "../assets/img/svg/jeans.svg",
+        precio: 13
+      },
+      {
         cliente: "11111-c",
         codigo: "12345",
         estado: "Secando",
