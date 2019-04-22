@@ -53,4 +53,44 @@
   align-self: center;
 }
 
+#pedidos-usuario {
+  background: rgba(55, 97, 204, 0.144);
+  margin-bottom: 1.5em;
+}
+#pedidos-usuario .card-body {
+  display: flex;
+}
+#pedidos-usuario #div-imgP {
+  width: 25%;
+  margin-right: 1em;
+}
+#pedidos-usuario #div-imgP #img-pedidos {
+  width: 100%;
+}
+#pedidos-usuario .list-group .card-body {
+  margin: 0px;
+  padding: 0px;
+}
+#pedidos-usuario .list-group .card-body .img-prenda {
+  width: min-content;
+  align-self: center;
+}
+#pedidos-usuario .list-group .card-body .img-prenda img {
+  width: 100%;
+}
+#pedidos-usuario .list-group .card-body .info-pedido {
+  padding-left: 1em;
+  width: 100%;
+}
+#pedidos-usuario .list-group .card-body .info-pedido .precio {
+  margin-left: 65%;
+  font-size: x-large;
+}
+#pedidos-usuario .list-group .card-body .alert-pedido {
+  font-size: larger;
+}
+#pedidos-usuario .list-group .card-body p {
+  margin: 0px;
+}
+
 /*# sourceMappingURL=perfil_usuario.css.map */

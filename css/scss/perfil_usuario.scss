@@ -59,3 +59,34 @@
   }
 
 }
+
+#pedidos-usuario{
+  background: $blue-cards;
+  margin-bottom: 1.5em;
+
+  .card-body{ display: flex; }
+  #div-imgP{
+    width: 25%;
+    margin-right: 1em;
+    #img-pedidos{ width: 100%; }
+  }
+  .list-group .card-body{
+    margin: 0px; padding: 0px;
+
+    .img-prenda{
+      width: min-content;
+      align-self: center;
+      img{ width: 100%;}
+    }
+    .info-pedido{
+      padding-left: 1em;
+      width: 100%;
+      .precio{
+        margin-left: 65%;
+        font-size: x-large;
+      }
+    }
+    .alert-pedido{font-size: larger;}
+    p{ margin: 0px;}
+  }
+}

@@ -1,12 +1,48 @@
 <body>
   <div class="container">
-    <div class="card" id="perfil">
-      <div class="card-header"> Mi tarjeta de fidelidad</div>
-      <img src="../assets/img/svg/user.svg" id="user-img">
-      <h5 class="card-title">Usuario</h5>
+
+    <div class="card" id="pedidos-usuario">
+      <div class="card-header"> Mis pedidos</div>
+
       <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div id="div-imgP"><img src="../assets/img/svg/user.svg" id="img-pedidos"></div>
+        <div>
+          <h5 class="card-title" id="name-tarjeta"></h5>
+          <p id="clave-tarjeta"> </p>
+        </div>
+      </div>
+      <ul id="pedidos" class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="card-body">
+            <div class="img-prenda"><img src="../assets/img/svg/dress.svg"> Vestido </div>
+            <div class="info-pedido">
+              <p>No. Pedido: 18546</p>
+              <p>Estado: Lavando</p>
+              <p class="precio">20 €</p>
+            </div>
+            <div>
+              <a href="#" class="badge badge-info alert-pedido" data-toggle="modal" data-target="#modalMensaje">!</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="modal fade" id="modalMensaje" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+          </div>
+          <div id="texto-mensaje" class="modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="descartarMensaje();"> Descartar </button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="aceptarMensaje();"> Aceptar </button>
+          </div>
+        </div>
       </div>
     </div>
+
   </div>
 </body>
