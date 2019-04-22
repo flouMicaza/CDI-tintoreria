@@ -15,382 +15,75 @@
       </div>
       <div class="col-2 columna opciones"></div>
     </div>
-
-    <div class="row" id="rowLabel1">
-      <div class="col-2 columna" id="cantidadLabel-1">
-        50
-      </div>
-      <div class="col-3 columna" id="nombreLabel-1">
-        Detergente super
-      </div>
-      <div class="col-2 columna" id="precioLabel-1">
-        10
-      </div>
-      <div class="col-3 columna no-disponible" id="disponibleLabel-1">
-        No Disponible
-      </div>
-      <div class="col-2 columna opciones" id="opcionesLabel-1">
-        <button id="editarLabel-1" class="btn" onclick="editarStock('1');">
-          <img
-            type="image"
-            src="../assets/img/svg/pencil.svg"
-            width="30"
-            height="30"
-            id="editarLabel-1"
-          />
-        </button>
-
-        <button id="eliminarLabel-1" class="btn">
-          <img
-            type="image"
-            src="../assets/img/svg/trashcan.svg"
-            width="30"
-            height="30"
-            data-toggle="modal"
-            data-target="#modalEliminarLabel-1"
-          />
-        </button>
-      </div>
-      <!-- Modal -->
-      <div
-        class="modal fade"
-        id="modalEliminarLabel-1"
-        role="dialog"
-        aria-labelledby="modalRegistroLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalRegistroLabel">
-                Eliminar producto
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              Seguro que desea eliminar este producto?
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-dismiss="modal"
-                onclick="eliminarElemento('1')"
-              >
-                Aceptar
-              </button>
-              <button type="button" class="btn btn-danger" data-dismiss="modal">
-                Cancelar
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row" id="rowInput1" style="display: none;">
-      <div class="col-2 columna" id="cantidadInput-1">
-        <input
-          class="form-control"
-          type="text"
-          style="margin:5px"
-          required
-          value="50"
-        />
-      </div>
-      <div class="col-3 columna" id="nombreInput-1">
-        <input
-          class="form-control"
-          type="text"
-          required
-          value="Detergente super"
-          style="margin:10px"
-        />
-      </div>
-      <div class="col-2 columna" id="precioInput-1">
-        <input
-          class="form-control"
-          type="text"
-          style="margin:5px"
-          required
-          value="10"
-        />
-      </div>
-      <div class="col-3 columna no-disponible" id="disponibleInput-1">
-        <div
-          class="custom-control custom-switch"
-          id="switch-1"
-          onclick="switchDisponibilidad(this);"
-          style="margin:10px"
-        >
+    <div id="table_body_stock">
+      <!-- <div class="row" id="rowInput1" style="display: none;">
+        <div class="col-2 columna" id="cantidadInput-1">
           <input
-            type="checkbox"
-            class="custom-control-input"
-            id="activacion-1"
+            class="form-control"
+            type="text"
+            style="margin:5px"
+            required
+            value="50"
           />
-          <label class="custom-control-label" for="activacion-1">
-            No Disponible
-          </label>
         </div>
-      </div>
 
-      <div class="col-2 columna opciones" id="opcionesInput-1">
-        <button id="editarInput-1" class="btn" onclick="confirmarStock('1');">
-          <img
-            type="image"
-            src="../assets/img/svg/check.svg"
-            width="30"
-            height="30"
-            id="editarInput-1"
-          />
-        </button>
-        <button id="eliminarInput-1" class="btn">
-          <img
-            type="image"
-            src="../assets/img/svg/trashcan.svg"
-            width="30"
-            height="30"
-            data-toggle="modal"
-            data-target="#modalEliminarInput-1"
-          />
-        </button>
-      </div>
-      <!-- Modal -->
-      <div
-        class="modal fade"
-        id="modalEliminarInput-1"
-        role="dialog"
-        aria-labelledby="modalRegistroInput"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalRegistroInput">
-                Eliminar producto
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                data-elemento="1"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              Seguro que desea eliminar este producto?
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-primary"
-                onclick="eliminarElemento('1')"
-              >
-                Aceptar
-              </button>
-              <button type="button" class="btn btn-danger" data-dismiss="modal">
-                Cancelar
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row" id="rowLabel2">
-      <div class="col-2 columna" id="cantidadLabel-2">
-        50
-      </div>
-      <div class="col-3 columna" id="nombreLabel-2">
-        Detergente super
-      </div>
-      <div class="col-2 columna" id="precioLabel-2">
-        10
-      </div>
-      <div class="col-3 columna no-disponible" id="disponibleLabel-2">
-        No Disponible
-      </div>
-      <div class="col-2 columna opciones" id="opcionesLabel-2">
-        <button id="editarLabel-2" class="btn" onclick="editarStock('2');">
-          <img
-            type="image"
-            src="../assets/img/svg/pencil.svg"
-            width="30"
-            height="30"
-            id="editarLabel-2"
-          />
-        </button>
-
-        <button id="eliminarLabel-2" class="btn">
-          <img
-            type="image"
-            src="../assets/img/svg/trashcan.svg"
-            width="30"
-            height="30"
-            data-toggle="modal"
-            data-target="#modalEliminarLabel-2"
-          />
-        </button>
-      </div>
-      <!-- Modal -->
-      <div
-        class="modal fade"
-        id="modalEliminarLabel-2"
-        role="dialog"
-        aria-labelledby="modalRegistroLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalRegistroLabel">
-                Eliminar producto
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              Seguro que desea eliminar este producto?
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-dismiss="modal"
-                onclick="eliminarElemento('2')"
-              >
-                Aceptar
-              </button>
-              <button type="button" class="btn btn-danger" data-dismiss="modal">
-                Cancelar
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row" id="rowInput2" style="display: none;">
-      <div class="col-2 columna" id="cantidadInput-2">
-        <input
-          class="form-control"
-          type="text"
-          style="margin:5px"
-          required
-          value="50"
-        />
-      </div>
-      <div class="col-3 columna" id="nombreInput-2">
-        <input
-          class="form-control"
-          type="text"
-          style="margin:10px"
-          required
-          value="Detergente super"
-        />
-      </div>
-      <div class="col-2 columna" id="precioInput-2">
-        <input
-          class="form-control"
-          type="text"
-          style="margin:5px"
-          required
-          value="10"
-        />
-      </div>
-      <div class="col-3 columna no-disponible" id="disponibleInput-2">
-        <div
-          class="custom-control custom-switch"
-          style="margin:5px"
-          id="switch-2"
-          onclick="switchDisponibilidad(this);"
-        >
+        <div class="col-3 columna" id="nombreInput-1">
           <input
-            type="checkbox"
-            class="custom-control-input"
-            id="activacion-2"
+            class="form-control"
+            type="text"
+            required
+            value="Detergente super"
+            style="margin:10px"
           />
-          <label class="custom-control-label" for="activacion-2">
-            No Disponible
-          </label>
         </div>
-      </div>
-
-      <div class="col-2 columna opciones" id="opcionesInput-2">
-        <button id="editarInput-2" class="btn" onclick="confirmarStock('2');">
-          <img
-            type="image"
-            src="../assets/img/svg/check.svg"
-            width="30"
-            height="30"
-            id="editarInput-2"
+        <div class="col-2 columna" id="precioInput-1">
+          <input
+            class="form-control"
+            type="text"
+            style="margin:5px"
+            required
+            value="10"
           />
-        </button>
-        <button id="eliminarInput-2" class="btn">
-          <img
-            type="image"
-            src="../assets/img/svg/trashcan.svg"
-            width="30"
-            height="30"
-            data-toggle="modal"
-            data-target="#modalEliminarInput-2"
-          />
-        </button>
-      </div>
-      <!-- Modal -->
-      <div
-        class="modal fade"
-        id="modalEliminarInput-2"
-        role="dialog"
-        aria-labelledby="modalRegistroInput"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalRegistroInput">
-                Eliminar producto
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                data-elemento="2"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              Seguro que desea eliminar este producto?
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-primary"
-                onclick="eliminarElemento('2')"
-              >
-                Aceptar
-              </button>
-              <button type="button" class="btn btn-danger" data-dismiss="modal">
-                Cancelar
-              </button>
-            </div>
+        </div>
+        <div class="col-3 columna no-disponible" id="disponibleInput-1">
+          <div
+            class="custom-control custom-switch"
+            id="switch-1"
+            onclick="switchDisponibilidad(this);"
+            style="margin:10px"
+          >
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="activacion-1"
+            />
+            <label class="custom-control-label" for="activacion-1">
+              No Disponible
+            </label>
           </div>
         </div>
-      </div>
+
+        <div class="col-2 columna opciones" id="opcionesInput-1">
+          <button id="editarInput-1" class="btn" onclick="confirmarStock('1');">
+            <img
+              type="image"
+              src="../assets/img/svg/check.svg"
+              width="30"
+              height="30"
+              id="editarInput-1"
+            />
+          </button>
+          <button id="eliminarInput-1" class="btn">
+            <img
+              type="image"
+              src="../assets/img/svg/trashcan.svg"
+              width="30"
+              height="30"
+              data-toggle="modal"
+              data-target="#modalEliminarInput-1"
+            />
+          </button>
+        </div> -->
     </div>
   </div>
 </body>

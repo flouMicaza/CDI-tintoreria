@@ -1,5 +1,4 @@
 function cargar() {
-
   var usuarios = {
     usuarios: [
       {
@@ -51,7 +50,8 @@ function cargar() {
         email: "trabajador2@mail.com",
         pass: "contraseña"
       }
-  ]};
+    ]
+  };
 
   var prendas = {
     prendas: [
@@ -72,14 +72,16 @@ function cargar() {
         nombre: "suéter",
         tipos: ["seda", "polar", "algodón", "lino", "tipo1", "tipo2"]
       }
-  ]};
+    ]
+  };
 
   var servicios = {
     servicios: [
       { nombre: "lavado simple" },
       { nombre: "lavado en seco" },
       { nombre: "tintado" }
-  ]};
+    ]
+  };
 
   var articulos = {
     articulos: [
@@ -108,7 +110,7 @@ function cargar() {
         clave: "prod-4",
         nombre: "suavizante delicados",
         stock: 1,
-        disponible: true,
+        disponible: false,
         precio: 10
       },
       {
@@ -129,7 +131,7 @@ function cargar() {
         clave: "prod-7",
         nombre: "bolsas ropa delicada",
         stock: 1,
-        disponible: true,
+        disponible: false,
         precio: 10
       },
       {
@@ -139,7 +141,8 @@ function cargar() {
         disponible: true,
         precio: 10
       }
-  ]};
+    ]
+  };
 
   var tarjetas = {
     tarjetas:[
