@@ -25,7 +25,8 @@
             </div>
             <div class="card-body">
               <div class="form-group">
-                <label for="tipo_prenda">Tipo de Prenda</label>
+                <label for="tipo_prenda">Tipo de Prenda</label
+                ><label class="text-danger">*</label>
 
                 <select
                   name="tipo_prenda"
@@ -43,7 +44,8 @@
                 </select>
               </div>
               <div class="form-group">
-                <label for="tipo_tela">Tipo de Tela</label>
+                <label for="tipo_tela">Tipo de Tela</label
+                ><label class="text-danger">*</label>
                 <select name="tipo_tela" id="tipo_tela" class="form-control">
                   <option value="selec">--Seleccionar--</option>
                   <option value="algodon">Algodón</option>
@@ -69,7 +71,8 @@
                 </div>
               </div>
               <div class="form-group" id="botones">
-                <label>Tipo de servicio: </label><br />
+                <label>Tipo de servicio: </label
+                ><label class="text-danger">*</label><br />
                 <div class="btn-group" role="group" aria-label="Basic example">
                   <input
                     type="image"
@@ -103,24 +106,28 @@
             </div>
             <div class="card-body">
               <div class="form-group" id="trabajador">
-                <label for="idt">ID Trabajador</label>
+                <label for="idt">ID Trabajador</label
+                ><label class="text-danger">*</label>
                 <input
                   type="text"
                   name="idt"
                   id="idt"
                   placeholder="Ingrese trabajador"
+                  required
                   class="form-control"
                 />
               </div>
 
               <div class="form-group" id="cliente">
-                <label for="idc">ID Cliente</label>
+                <label for="idc">ID Cliente </label
+                ><label class="text-danger">*</label>
                 <div class="form-row">
                   <div class="col">
                     <input
                       type="text"
                       name="idc"
                       id="idc"
+                      required
                       placeholder="Buscar cliente"
                       class="form-control"
                     />
@@ -191,6 +198,7 @@
                 id="idClienteNuevo"
                 placeholder="11111111-1"
                 class="form-control"
+                required
               />
             </div>
             <div class="form-group" id="nombreNuevo">
@@ -201,6 +209,7 @@
                 id="nombreClienteNuevo"
                 placeholder="Juan Alfaro Toledo"
                 class="form-control"
+                required
               />
             </div>
             <div class="form-group" id="telefonoNuevo">
@@ -211,6 +220,7 @@
                 id="telefonoClienteNuevo"
                 placeholder="34 369 255 019"
                 class="form-control"
+                required
               />
             </div>
             <div class="form-group" id="mailNuevo">
@@ -221,6 +231,7 @@
                 id="mailClienteNuevo"
                 placeholder="micorreo@ejemplo.es"
                 class="form-control"
+                required
               />
             </div>
           </form>
