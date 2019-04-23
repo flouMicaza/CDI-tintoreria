@@ -21,15 +21,16 @@
         .select-container{ height: 36px; } /* Tamaño del select. Ver el tamaño inspeccionando el elemento si se cambia. */
     </style>
   <div class="container">
-    <div class="alert alert-success alert-dismissible fade show" style="display:none" role="alert">
+    <div class="alert alert-success alert-dismissible fade show" style="display:none" role="alert" id="alertaCliente">
       Nuevo cliente creado con éxito!
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
-    <form action=" " role="form">
-      <div class="row">
-        <div class="col-6" style="height:100px">
+    
+    <form  role="form">
+      <div class="card-deck" >
+        
           <div class="card bg-light" style="border-color: rgb(164, 201, 255); " >
             <div class="card-header" style="background-color: rgb(164, 201, 255);">
               <span> <i class="fa fa-tshirt"></i> </span>
@@ -49,7 +50,7 @@
                     <div class="option" value="falda"><img src="assets/img/skirt.png"><span>  Falda</span></div>
                     <div class="option" value="vestido"><img src="assets/img/dress.png"><span>  Vestido</span></div>
                     <div class="arrow">&blacktriangle;</div>
-                    <select name="tipo_prenda" id="tipo_prenda"></select>
+                    <select name="tipo_prenda" id="tipo_prenda" value="0"></select>
                   </div>
                 </div>
 
@@ -76,7 +77,7 @@
                       <div class="option" value="franela"><img src="assets/img/umbrella.png"><span>  Impermeable</span></div>
                       <div class="option" value="licra"><img src="assets/img/flask.png"><span>  Fibra Sintética</span></div>
                       <div class="arrow">&blacktriangle;</div>
-                      <select name="tipo_tela" id="tipo_tela"></select>
+                      <select name="tipo_tela" id="tipo_tela" value="0"></select>
                     </div>
                   </div>
                 <!--select name="tipo_tela" id="tipo_tela" class="form-control">
@@ -91,8 +92,8 @@
               </div>
               <div class="form-group">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                  <label class="form-check-label" for="defaultCheck1">
+                  <input class="form-check-input" type="checkbox" value="" id="checkModista" />
+                  <label class="form-check-label" for="checkModista">
                     <img src="assets/img/svg/thread.svg" width="20" />
                     Modista
                   </label>
@@ -100,7 +101,7 @@
               </div>
               <div class="form-group" id="botones">
                 <label>Tipo de servicio: </label><label class="text-danger">*<font size="0.5" class="text-danger">(obligatorio)</font></label><br />
-                <div class="btn-group" style="" role="group" aria-label="Basic example">
+                <div class="btn-group" style="" role="group" aria-label="Basic example" id="tipo_servicio">
                   <button type="button" class="btn btn-outline-primary" data-dismiss="alert" aria-label="Close"><input type="image" checked src="assets/img/svg/dry-cleaning.svg" width="80px" style="border:none !important; outline:none !important; margin-left:25px; margin-right:25px; height: 120px; border:0;" /></button>
                    <button type="button"class="btn btn-outline-primary" data-dismiss="alert" aria-label="Close">  <input type="image" src="assets/img/svg/washing-machine.svg" width="80px" style="border:none !important; outline:none !important; margin-left:25px; margin-right:25px; height: 120px; border:0;" /></button>
                 
@@ -110,9 +111,8 @@
               </div>
             </div>
           </div>
-        </div>
+        
 
-        <div class="col-6" style="height:100px">
           <div class="card bg-light" style="border-color: rgb(164, 201, 255);">
             <div class="card-header" style="background-color: rgb(164, 201, 255);">
               <span> <i class="fa fa-user"></i> </span>
@@ -146,14 +146,15 @@
                 <textarea name="idc" id="obs" class="form-control"></textarea>
               </div>
               <div align="right">
-                <button type="button" class="btn btn-primary mb-2" id="agregarPedido" >
+                <small class="text-danger" style="display:none" id="mensajeError">*Debes llenar todos los campos obligatorios</small>
+                <button type="button" onclick="agregarPedido1()" class="btn btn-primary mb-2" id="agregarPedido" >
                 Agregar pedido
               </button>
               </div>
               
             </div>
           </div>
-        </div>
+        
       </div>
     </form>
   </div>
