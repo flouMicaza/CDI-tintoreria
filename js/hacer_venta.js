@@ -73,7 +73,102 @@ function construirArticulo(articulo, num, ncol) {
   $("#producto-" + num)
     .find("p")
     .text(articulo.precio + " \u20AC");
+  $("#producto-" + num).click(function() {
+    //quitar del canasto
+    if (this.className == "card bg-primary") {
+      this.className = "card border-primary";
+      quitarDeResumen(this);
+    }
+    //agregar al canasto
+    else {
+      agregarAResumen(this);
+      this.className = "card bg-primary";
+    }
+  });
 }
+function agregarAResumen(elemento) {
+  var tipo = elemento.id.split("-")[0];
+  var id = elemento.id.split("-")[1];
+  if (tipo == "pedido") {
+    agregarPedidoResumen(id);
+  } else {
+    agregarProductoResumen(id);
+  }
+  $("#cartaSinProductos").remove();
+  $("#botonPagar").prop("disabled", false);
+}
+
+function agregarProductoResumen(id) {
+  $("#tarjetasResumen").append($("#tarjetaProducto").clone());
+  var tarjetasResumen = document.getElementById("tarjetasResumen");
+  var ultimoDiv = tarjetasResumen.lastChild;
+  ultimoDiv.id = "ventaProducto" + id;
+  ultimoDiv.style = "";
+  var nombreProducto = $("#producto-" + id)
+    .find("h6")
+    .text();
+  var pes = $("#ventaProducto" + id).find("p");
+  console.log(pes);
+  var precio = $("#producto-" + id)
+    .find("p")
+    .text();
+  pes[0].innerText = nombreProducto;
+  pes[1].innerText = precio;
+  var totalActual = $("#precioTotal")
+    .find("p")
+    .text();
+  totalActual = totalActual.substring(0, totalActual.length - 1);
+  $("#precioTotal")
+    .find("p")
+    .text(parseInt(totalActual) + parseInt(precio) + "\u20AC");
+
+  console.log(totalActual.length, "holaa");
+  var botonX = $("#ventaProducto" + id).find("span");
+  botonX.click(function() {
+    quitarDeResumen(document.getElementById("producto-" + id));
+  });
+}
+function agregarPedidoResumen(id) {
+  $("#tarjetasResumen").append($("#tarjetaPedido").clone());
+  var tarjetasResumen = document.getElementById("tarjetasResumen");
+  var ultimoDiv = tarjetasResumen.lastChild;
+  ultimoDiv.id = "ventaPedido" + id;
+  ultimoDiv.style = "";
+  var idPedido = $("#pedido-" + id)
+    .find(".card-header")
+    .text()
+    .split(":")[1];
+  var pes = $("#ventaPedido" + id).find("p");
+  pes[0].innerText = "Pedido #" + idPedido;
+
+  var selectorContentPedido = $("#pedido-" + id)
+    .find(".card-body")
+    .find(".card-text");
+  precio = selectorContentPedido[2].lastChild.nodeValue;
+  pes[1].innerText = precio;
+  var botonX = $("#ventaPedido" + id).find("span");
+  botonX.click(function() {
+    quitarDeResumen(document.getElementById("pedido-" + id));
+  });
+  var totalActual = $("#precioTotal")
+    .find("p")
+    .text();
+  totalActual = totalActual.substring(0, totalActual.length - 1);
+  $("#precioTotal")
+    .find("p")
+    .text(parseInt(totalActual) + parseInt(precio) + "\u20AC");
+
+  console.log(totalActual.length, "holaa");
+}
+function quitarDeResumen(elemento) {
+  console.log(elemento);
+  var tipo = elemento.id.split("-")[0];
+  tipo = tipo.charAt(0).toUpperCase() + tipo.slice(1);
+  var id = elemento.id.split("-")[1];
+  $("#venta" + tipo + id).remove();
+  elemento.className = "card border-primary";
+}
+
 function construirPedido(pedido, num) {
   $("#columnaPedidos").append($("#primerPedido").clone());
   var columnaPedidosDiv = document.getElementById("columnaPedidos");
@@ -90,4 +185,14 @@ function construirPedido(pedido, num) {
   selector[0].lastChild.nodeValue = pedido.prenda;
   selector[1].lastChild.nodeValue = pedido.servicio;
   selector[2].lastChild.nodeValue = pedido.precio + " \u20AC";
+
+  $("#pedido-" + num).click(function() {
+    if (this.className == "card bg-primary") {
+      this.className = "card border-primary";
+      quitarDeResumen(this);
+    } else {
+      this.className = "card bg-primary";
+      agregarAResumen(this);
+    }
+  });
 }
