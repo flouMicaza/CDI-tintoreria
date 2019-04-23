@@ -221,7 +221,7 @@ function cargar() {
         prenda: "Camisa",
         servicio: "Lavado en seco",
         trabajador: "22222-t",
-        img: "../assets/img/svg/shirt.svg",
+        img: "assets/img/svg/shirt.svg",
         precio: 25
       },
       {
@@ -231,17 +231,17 @@ function cargar() {
         prenda: "Pantalon",
         servicio: "Lavado completo",
         trabajador: "11111-t",
-        img: "../assets/img/svg/jeans.svg",
+        img: "assets/img/svg/jeans.svg",
         precio: 13
       },
       {
         cliente: "11111-c",
         codigo: "12345",
         estado: "Secado",
-        prenda: "Lavando en seco",
+        prenda: "Camiseta",
         servicio: "Lavado en seco",
         trabajador: "11111-t",
-        img: "../assets/img/svg/tshirt.svg",
+        img: "assets/img/svg/tshirt.svg",
         precio: 8
       },
       {
@@ -251,7 +251,7 @@ function cargar() {
         prenda: "Pantalón",
         servicio: "Lavado completo",
         trabajador: "22222-t",
-        img: "../assets/img/svg/jeans.svg",
+        img: "assets/img/svg/jeans.svg",
         precio: 15
       },
       {
@@ -261,7 +261,7 @@ function cargar() {
         prenda: "Falda",
         servicio: "Tintado",
         trabajador: "22222-t",
-        img: "../assets/img/svg/skirt.svg",
+        img: "assets/img/svg/skirt.svg",
         precio: 25
       }
     ]

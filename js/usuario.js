@@ -48,7 +48,7 @@ function guardarDatos(){
   });
 
   $("#usuario-actual").text(usuario.nombre);
-  $("#usuario-actual").prepend("<img src='../assets/img/svg/exit.svg' height='25'>");
+  $("#usuario-actual").prepend("<img src='assets/img/svg/exit.svg' height='25'>");
 }
 
 function cargaTarjeta(){

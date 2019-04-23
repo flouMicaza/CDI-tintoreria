@@ -130,7 +130,7 @@ function crearDivOpciones(num, tipo) {
     div_opciones += "onclick=\"editarStock('" + num + "')\">";
 
     div_opciones +=
-      '<img type="image" src="../assets/img/svg/pencil.svg"\
+      '<img type="image" src="assets/img/svg/pencil.svg"\
      width="30" height="30" id="editarLabel-' +
       num +
       '"; />';
@@ -141,7 +141,7 @@ function crearDivOpciones(num, tipo) {
     div_opciones += '<button id="editarInput-' + num + '" class="btn"';
     div_opciones += "onclick=\"confirmarStock('" + num + "')\">";
     div_opciones +=
-      '<img type="image" src="../assets/img/svg/check.svg"\
+      '<img type="image" src="assets/img/svg/check.svg"\
      width="30" height="30" id="editarInput-' +
       num +
       '"; />';
@@ -150,7 +150,7 @@ function crearDivOpciones(num, tipo) {
 
   div_opciones += '<button id="eliminar' + tipo + "-" + num + '" class="btn">';
   div_opciones +=
-    '<img type="image" src="../assets/img/svg/trashcan.svg"\
+    '<img type="image" src="assets/img/svg/trashcan.svg"\
      width="30" height="30" data-toggle="modal" data-target="#modalEliminar' +
     tipo +
     "-";
