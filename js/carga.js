@@ -77,9 +77,42 @@ function cargar() {
 
   var servicios = {
     servicios: [
-      { nombre: "lavado simple" },
-      { nombre: "lavado en seco" },
-      { nombre: "tintado" }
+      {
+        nombre: "Lavado completo",
+        estados: [  
+                  "En Lavandería",
+                  "Arreglando", 
+                  "Lavando", 
+                  "Secado",
+                  "Secado y Revisión",
+                  "Planchado",
+                  "Terminado" 
+                ]
+      },
+      { 
+        nombre: "Lavado en seco",
+        estados: [
+                  "En Lavandería",
+                  "Arreglando",
+                  "Eliminación de manchas",
+                  "Lavando en seco",
+                  "Planchado",
+                  "Terminado"
+                ]
+      },
+      { 
+        nombre: "Tintado",
+        estados: [
+                "En Lavandería",
+                "Arreglando", 
+                "Lavando", 
+                "Secado",
+                "Secado y Revisión",
+                "Tintado",
+                "Planchado",
+                "Terminado" 
+              ]
+      }
     ]
   };
 
@@ -176,6 +209,8 @@ function cargar() {
         codigo: "15742",
         estado: "Finalizado",
         prenda: "Vestido",
+        servicio: "Tintado",
+        trabajador: "11111-t",
         img: "../assets/img/svg/dress.svg",
         precio: 18
       },
@@ -184,6 +219,8 @@ function cargar() {
         codigo: "12831",
         estado: "Lavando",
         prenda: "Camisa",
+        servicio: "Lavado en seco",
+        trabajador: "22222-t",
         img: "../assets/img/svg/shirt.svg",
         precio: 25
       },
@@ -192,6 +229,8 @@ function cargar() {
         codigo: "90478",
         estado: "Lavando",
         prenda: "Pantalon",
+        servicio: "Lavado completo",
+        trabajador: "11111-t",
         img: "../assets/img/svg/jeans.svg",
         precio: 13
       },
@@ -200,6 +239,8 @@ function cargar() {
         codigo: "12345",
         estado: "Secando",
         prenda: "Camiseta",
+        servicio: "Lavado en seco",
+        trabajador: "11111-t",
         img: "../assets/img/svg/tshirt.svg",
         precio: 8
       },
@@ -208,6 +249,8 @@ function cargar() {
         codigo: "79356",
         estado: "En espera",
         prenda: "Pantalón",
+        servicio: "Lavado completo",
+        trabajador: "22222-t",
         img: "../assets/img/svg/jeans.svg",
         precio: 15
       },
@@ -216,10 +259,11 @@ function cargar() {
         codigo: "39590",
         estado: "Secando",
         prenda: "Falda",
+        servicio: "Tintado",
+        trabajador: "22222-t",
         img: "../assets/img/svg/skirt.svg",
         precio: 25
       }
-
     ]
   }
 

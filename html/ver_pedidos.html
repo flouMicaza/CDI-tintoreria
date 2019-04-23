@@ -1,114 +1,43 @@
 <body>
-  <div class="container">
+  <div class="container" id="pedidos-trabajador">
+
     <div class="row Heading">
-      <div class="col-2 columna">
-        ID Pedido
-      </div>
-      <div class="col-2 columna">
-        Tipo de Prenda
-      </div>
-      <div class="col-2 columna">
-        Tipo de Servicio
-      </div>
-      <div class="col-2 columna">
-        Estado
-      </div>
-      <div class="col-2 columna">
-        Cambiar Estado
-      </div>
-      <div class="col-2 columna">
-        Contactar Cliente
-      </div>
+      <div class="col columna"> ID Pedido </div>
+      <div class="col columna"> Tipo de Prenda </div>
+      <div class="col columna"> Tipo de Servicio </div>
+      <div class="col columna"> Estado </div>
+      <div class="col columna"> Contactar Cliente </div>
     </div>
 
-    <div class="row">
-      <div class="col-2 columna">
-        1224
-      </div>  
-      <div class="col-2 columna">
-        Falda
-      </div>
-      <div class="col-2 columna">
-        Lavado Completo
-        </div>
-      <div class="col-2 columna opciones">
-        Lavando <img src="../assets/img/svg/washing-machine.svg" width="20" />
-      </div>
-      <div class="col-2 columna">
-        
+      <div class="row">
 
-         <select name="tipo_prenda" id="tipo_prenda"  class="form-control">
+        <div class="col columna"> 1224 </div>  
+        <div class="col columna"> Falda </div>
+        <div class="col columna"> Lavado Completo </div>
 
+        <div class="col columna">
+          <select name="tipo_prenda" id="tipo_prenda"  class="form-control">
             <option value="camiseta">Lavando</option>
             <option value="camisa">Secando</option>
             <option value="pantalon">En Espera</option>
             <option value="falda">Finalizado</option>
+          </select>  
+        </div>
 
-          </select>
-          
+        <div class="col columna">
+          <button class="btn btn-primary contact" data-toggle="collapse" data-target="#pedido-1" aria-expanded="false" aria-controls"demo">Contactar</button>
         </div>
-        <div class="col-2 columna">
-        <button class="btn btn-primary" data-toggle="collapse" data-target="#pedido-1" aria-expanded="false" aria-controls"demo">Contactar Cliente</button>
       </div>
-      </div>
+
       <div class="row">
-    <div class="col-12 columna ">
-    <div id="pedido-1" class="collapse sms">
-         
-      <label for="obs">Introduzca aquí su mensaje</label>
+        <div class="col columna ">
+          <div id="pedido-1" class="collapse sms">
+            <label for="obs">Introduzca aquí su mensaje</label>
             <textarea name="idc" id="obs" class="form-control"></textarea>
-        <div style="margin-top:10px; text-align: right"><button class="btn btn-primary"> Enviar SMS</button></div>
-            
-    </div>
+            <div style="margin-top:10px; text-align: right"><button class="btn btn-primary"> Enviar SMS</button></div> 
+          </div>
+        </div>
       </div>
-    </div>
-        <div class="row">
-          <div class="col-2 columna">
-            1224
-          </div>
-          <div class="col-2 columna">
-            Falda
-          </div>
-          <div class="col-2 columna">
-            Lavado Completo
-          </div>
-          <div class="col-2 columna opciones">
-            Secando <img src="../assets/img/svg/tumble-dryer.svg" width="20" />
-          </div>
-          <div class="col-2 columna">
-        
-        
-            <select name="tipo_prenda" id="tipo_prenda" class="form-control">
-        
-              <option value="camisa">Secando</option>
-              <option value="camiseta">Lavando</option>
-              
-              <option value="pantalon">En Espera</option>
-              <option value="falda">Finalizado</option>
-        
-        
-        
-            </select>
-        
-          </div>
-          <div class="col-2 columna">
-            <button class="btn btn-primary" data-toggle="collapse" data-target="#pedido-2" aria-expanded="false"
-              aria-controls"demo">Contactar Cliente</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 columna ">
-            <div id="pedido-2" class="collapse sms">
-        
-              <label for="obs">Introduzca aquí su mensaje</label>
-              <textarea name="idc" id="obs" class="form-control"></textarea>
-              <div style="margin-top:10px; text-align: right"><button class="btn btn-primary"> Enviar SMS</button></div>
-        
-            </div>
-          </div>
-        </div>
-    </div>
-    
-    
- 
+
+  </div>
 </body>
