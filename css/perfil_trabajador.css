@@ -3,7 +3,12 @@
 }
 
 .columna {
-  padding-top: 16px;
+  padding: 16px;
+  width: fit-content;
+}
+
+.sms-texto {
+  padding: 0px;
 }
 
 /*# sourceMappingURL=perfil_trabajador.css.map */

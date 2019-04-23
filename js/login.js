@@ -46,11 +46,11 @@ function cargaInicio() {
             elementos += "<div class='col columna'>"+pedido.servicio+"</div>";
             elementos += listado;
             elementos += "<div class='col columna'>";
-            elementos += "<button class='btn btn-primary contact' data-toggle='collapse' data-target='#"+pedido.codigo+"' aria-expanded='false' aria-controls='demo'>Contactar</button></div></div>";
+            elementos += "<button id='btn-"+pedido.codigo+"' class='btn btn-primary contact collapsed' onclick='cambiarBtn(\""+pedido.codigo+"\");' data-toggle='collapse' data-target='#pedido-"+pedido.codigo+"' aria-expanded='false' aria-controls='demo'>Contactar</button></div></div>";
 
-            elementos += "<div class='row'><div class='col columna'><div id='"+pedido.codigo+"' class='collapse sms'>"
-            elementos += "<label for='obs'>Introduzca aquí su mensaje</label><textarea name='idc' id='obs' class='form-control'></textarea>";
-            elementos += "<div style='margin-top:10px; text-align: right'><button class='btn btn-primary'> Enviar SMS</button></div> </div></div></div>";
+            elementos += "<div class='row'><div class='col columna sms-texto'><div id='pedido-"+pedido.codigo+"' class='collapse sms'>";
+            elementos += "<label for='obs-"+pedido.codigo+"'>Introduzca aquí su mensaje</label><textarea name='idc' id='obs-"+pedido.codigo+"' class='form-control'></textarea>";
+            elementos += "<div style='margin-top:10px; text-align: right'><button class='btn btn-primary' onclick='enviarSMS(\""+pedido.codigo+"\");' data-toggle='modal' data-target='#exampleModal'> Enviar SMS</button></div> </div></div></div>";
             
             $("#pedidos-trabajador").append(elementos);
           }
@@ -90,10 +90,6 @@ function ingresar() {
       $("#title-header").hide();
       $("#menu-nav").show();
       $("#usuario-actual").append(usuario.nombre);
-      setCookie("nombre", usuario.nombre);
-      setCookie("telefono", usuario.telefono);
-      setCookie("email", usuario.email);
-
       cargaInicio();
     } else {
       $("#wrong-pass").hide();
@@ -105,9 +101,6 @@ function ingresar() {
 function salir() {
   window.localStorage.removeItem("uActual");
   window.localStorage.removeItem("usuario");
-  setCookie("nombre", "");
-  setCookie("telefono", "");
-  setCookie("email", "");
   location.reload(true);
 }
 

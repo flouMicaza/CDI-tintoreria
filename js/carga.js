@@ -272,8 +272,20 @@ function cargar() {
       {
         cliente: "11111-c",
         pedido: "79356",
-        texto: "El mensaje que envia el trabajador al cliente sobre su pedido",
+        texto: "Prenda con manchas difíciles por lo que requiere servicio adicional",
         costo: 5
+      },
+      {
+        cliente: "22222-c",
+        pedido: "15742",
+        texto: "Prenda con manchas difíciles por lo que requiere servicio adicional",
+        costo: 7
+      },
+      {
+        cliente: "22222-c",
+        pedido: "90478",
+        texto: "Prenda con manchas difíciles por lo que requiere servicio adicional",
+        costo: 4
       }
     ]
   }

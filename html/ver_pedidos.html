@@ -9,35 +9,20 @@
       <div class="col columna"> Contactar Cliente </div>
     </div>
 
-      <div class="row">
-
-        <div class="col columna"> 1224 </div>  
-        <div class="col columna"> Falda </div>
-        <div class="col columna"> Lavado Completo </div>
-
-        <div class="col columna">
-          <select name="tipo_prenda" id="tipo_prenda"  class="form-control">
-            <option value="camiseta">Lavando</option>
-            <option value="camisa">Secando</option>
-            <option value="pantalon">En Espera</option>
-            <option value="falda">Finalizado</option>
-          </select>  
-        </div>
-
-        <div class="col columna">
-          <button class="btn btn-primary contact" data-toggle="collapse" data-target="#pedido-1" aria-expanded="false" aria-controls"demo">Contactar</button>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col columna ">
-          <div id="pedido-1" class="collapse sms">
-            <label for="obs">Introduzca aquí su mensaje</label>
-            <textarea name="idc" id="obs" class="form-control"></textarea>
-            <div style="margin-top:10px; text-align: right"><button class="btn btn-primary"> Enviar SMS</button></div> 
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Mensaje enviado</h5>
+          </div>
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="collapse" data-target=".sms.show">Aceptar</button>
           </div>
         </div>
       </div>
+    </div>
 
   </div>
 </body>

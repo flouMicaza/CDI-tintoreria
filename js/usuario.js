@@ -110,6 +110,16 @@ function mostrarMensaje(pedido){
 }
 
 function descartarMensaje(){
+  var pedido = $("#exampleModalLabel").html().slice(12);
+  var mensajes = JSON.parse(window.localStorage.getItem("mensajes")).mensajes;
+  var mensaje = mensajes.find(x => x.pedido == pedido);
+
+  mensajes.splice( mensajes.indexOf(mensaje), 1 );
+  $("#"+pedido+" .alert-pedido").hide();
+
+  window.localStorage.removeItem("mensajes");
+  window.localStorage.setItem("mensajes", JSON.stringify({mensajes:mensajes}));
+
   $("#texto-mensaje").text("");
   $("#exampleModalLabel").text("");
   $("#precio-mensaje").text("");
@@ -139,5 +149,7 @@ function aceptarMensaje(){
   window.localStorage.removeItem("mensajes");
   window.localStorage.setItem("pedidos", JSON.stringify({pedidos:pedidos}));
   window.localStorage.setItem("mensajes", JSON.stringify({mensajes:mensajes}));
-  descartarMensaje();
+  $("#texto-mensaje").text("");
+  $("#exampleModalLabel").text("");
+  $("#precio-mensaje").text("");
 }
