@@ -53,6 +53,12 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(document).ready(function(){
+        $("#slider").load("./html/login.html");
+        cargar();
+      });
+    </script>
   </head>
 
   <body>
@@ -203,45 +209,5 @@
     </nav>
 
     <div id="slider"></div>
-    <script>
-      $(document).ready(function() {
-        var user_login = JSON.parse(localStorage.getItem("usuario"));
-        if (user_login != null) {
-          var usuario_nombre = user_login.nombre;
-          var username = user_login.clave.substr(user_login.clave.length - 1);
-        }
-        if (username == "c" || username == "e" || username == "t") {
-          $("#breadcrumb").show();
-          $("#image-header").hide();
-          $("#title-header").hide();
-          $("#menu-nav").show();
-          $("#usuario-actual").append(usuario_nombre);
-          $("#breadcrumb").append("<li class='breadcrumb-item'>Inicio</li>");
-        }
-
-        if (username == "c") {
-          $("#slider").load("./html/perfil_usuario.html", function() {
-            $("#user-name").append(getCookie("nombre"));
-            $("#user-email").append(getCookie("email"));
-            $("#user-phone").append(getCookie("telefono"));
-          });
-          $(".activ").hide();
-          $("#nav-list").css("justify-content", "flex-end");
-          $("#logout").css("margin-right", "15px");
-          $(".navbar-brand").css("margin-right", "0px");
-          $(".cliente").show();
-        } else if (username == "e") {
-          $("#slider").load("./html/inicio_encargado.html");
-        } else if (username == "t") {
-          $("#slider").load("./html/ver_pedidos.html");
-          $(".activ").hide();
-          $("#nav-list").css("justify-content", "flex-end");
-          $("#logout").css("margin-right", "0px");
-        } else {
-          $("#slider").load("./html/login.html");
-          cargar();
-        }
-      });
-    </script>
   </body>
 </html>

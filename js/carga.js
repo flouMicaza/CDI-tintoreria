@@ -207,7 +207,7 @@ function cargar() {
       {
         cliente: "22222-c",
         codigo: "15742",
-        estado: "Finalizado",
+        estado: "Terminado",
         prenda: "Vestido",
         servicio: "Tintado",
         trabajador: "11111-t",
@@ -237,8 +237,8 @@ function cargar() {
       {
         cliente: "11111-c",
         codigo: "12345",
-        estado: "Secando",
-        prenda: "Camiseta",
+        estado: "Secado",
+        prenda: "Lavando en seco",
         servicio: "Lavado en seco",
         trabajador: "11111-t",
         img: "../assets/img/svg/tshirt.svg",
@@ -247,7 +247,7 @@ function cargar() {
       {
         cliente: "11111-c",
         codigo: "79356",
-        estado: "En espera",
+        estado: "Planchado",
         prenda: "Pantalón",
         servicio: "Lavado completo",
         trabajador: "22222-t",

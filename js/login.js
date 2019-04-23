@@ -31,10 +31,13 @@ function cargaInicio() {
 
           if(pedido.trabajador == trabajador){
             var estados = serviciosG.find(x => x.nombre == pedido.servicio).estados;
-            console.log(estados);
-            var listado = "<div class='col columna'><select name='tipo_prenda' class='form-control'>";
+            var listado = "<div class='col columna'><select value='Ejemplo' name='tipo_prenda' class='form-control'>";
             $.each(estados, function(index, edo){
-              listado += "<option value='"+edo+"'>"+edo+"</option>"; 
+              if (edo === pedido.estado){
+                listado += "<option value='"+edo+"' selected>"+edo+"</option>";
+              }else{
+                listado += "<option value='"+edo+"'>"+edo+"</option>"; 
+              }
             });listado += "</select></div>";
 
             var elementos = "<div class='row'>";
@@ -48,7 +51,7 @@ function cargaInicio() {
             elementos += "<div class='row'><div class='col columna'><div id='"+pedido.codigo+"' class='collapse sms'>"
             elementos += "<label for='obs'>Introduzca aquí su mensaje</label><textarea name='idc' id='obs' class='form-control'></textarea>";
             elementos += "<div style='margin-top:10px; text-align: right'><button class='btn btn-primary'> Enviar SMS</button></div> </div></div></div>";
-            console.log(elementos);
+            
             $("#pedidos-trabajador").append(elementos);
           }
         });
