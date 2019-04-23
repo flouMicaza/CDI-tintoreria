@@ -213,6 +213,7 @@ function cargar() {
         prenda: "Vestido",
         servicio: "Tintado",
         trabajador: "11111-t",
+        extras: "Costura",
         img: "../assets/img/svg/dress.svg",
         precio: 18
       },
@@ -223,6 +224,7 @@ function cargar() {
         prenda: "Camisa",
         servicio: "Lavado en seco",
         trabajador: "22222-t",
+        extras: "Ninguno",
         img: "assets/img/svg/shirt.svg",
         precio: 25
       },
@@ -233,6 +235,7 @@ function cargar() {
         prenda: "Pantalon",
         servicio: "Lavado completo",
         trabajador: "11111-t",
+        extras: "Manchas difíciles",
         img: "assets/img/svg/jeans.svg",
         precio: 13
       },
@@ -243,6 +246,7 @@ function cargar() {
         prenda: "Camiseta",
         servicio: "Lavado en seco",
         trabajador: "11111-t",
+        extras: "Ninguno",
         img: "assets/img/svg/tshirt.svg",
         precio: 8
       },
@@ -253,6 +257,7 @@ function cargar() {
         prenda: "Pantalón",
         servicio: "Lavado completo",
         trabajador: "22222-t",
+        extras: "Manchas difíciles",
         img: "assets/img/svg/jeans.svg",
         precio: 15
       },
@@ -263,6 +268,7 @@ function cargar() {
         prenda: "Falda",
         servicio: "Tintado",
         trabajador: "22222-t",
+        extras: "Ninguno",
         img: "assets/img/svg/skirt.svg",
         precio: 25
       }
@@ -280,7 +286,7 @@ function cargar() {
       {
         cliente: "22222-c",
         pedido: "15742",
-        texto: "Prenda con manchas difíciles por lo que requiere servicio adicional",
+        texto: "Prenda que necesita costura",
         costo: 7
       },
       {
