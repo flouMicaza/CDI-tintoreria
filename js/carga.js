@@ -3,28 +3,28 @@ function cargar() {
     usuarios: [
       {
         clave: "11111-c",
-        nombre: "cliente1",
+        nombre: "Cliente1",
         telefono: "3458672855",
         email: "cliente1@mail.com",
         pass: "contraseña"
       },
       {
         clave: "22222-c",
-        nombre: "cliente2",
+        nombre: "Cliente2",
         telefono: "34464562855",
         email: "cliente2@mail.com",
         pass: "contraseña"
       },
       {
         clave: "33333-c",
-        nombre: "cliente3",
+        nombre: "Cliente3",
         telefono: "3458673855",
         email: "cliente3@mail.com",
         pass: "contraseña"
       },
       {
         clave: "44444-c",
-        nombre: "cliente4",
+        nombre: "Cliente4",
         telefono: "34462562855",
         email: "cliente4@mail.com",
         pass: "contraseña"
@@ -38,14 +38,14 @@ function cargar() {
       },
       {
         clave: "11111-t",
-        nombre: "trabajador1",
+        nombre: "Trabajador1",
         telefono: "34464562855",
         email: "trabajador1@mail.com",
         pass: "contraseña"
       },
       {
         clave: "22222-t",
-        nombre: "trabajador2",
+        nombre: "Trabajador2",
         telefono: "34464562855",
         email: "trabajador2@mail.com",
         pass: "contraseña"
@@ -56,21 +56,23 @@ function cargar() {
   var prendas = {
     prendas: [
       {
-        nombre: "camiseta",
-        tipos: ["seda", "polar", "algodón", "lino", "tipo1", "tipo2"]
+        nombre: "Camiseta",
+        tipos: ["Algodón", "Lana", "Cuero", "Seda", "Impermeable", "Fibra Sintética"]
       },
       {
-        nombre: "pantalon",
-        tipos: ["tela", "seda", "polar", "algodón", "tipo1", "tipo2"]
+        nombre: "Camisa",
+        tipos: ["Algodón", "Lana", "Cuero", "Seda", "Impermeable", "Fibra Sintética"]
       },
-      { nombre: "vestido", tipos: ["jeans", "seda", "lino", "algodón", ""] },
-      {
-        nombre: "camisa",
-        tipos: ["seda", "polar", "algodón", "lino", "tipo1", "tipo2"]
+      { nombre: "Pantalón", 
+        tipos: ["Algodón", "Lana", "Cuero", "Seda", "Impermeable", "Fibra Sintética"] 
       },
       {
-        nombre: "suéter",
-        tipos: ["seda", "polar", "algodón", "lino", "tipo1", "tipo2"]
+        nombre: "Falda",
+        tipos: ["Algodón", "Lana", "Cuero", "Seda", "Impermeable", "Fibra Sintética"]
+      },
+      {
+        nombre: "Vestido",
+        tipos: ["Algodón", "Lana", "Cuero", "Seda", "Impermeable", "Fibra Sintética"]
       }
     ]
   };
@@ -78,14 +80,14 @@ function cargar() {
   var servicios = {
     servicios: [
       {
-        nombre: "Lavado completo",
+        nombre: "Lavado Completo",
         estados: [  
                   "En Lavandería",
                   "Arreglando", 
                   "Lavando", 
                   "Secado",
                   "Secado y Revisión",
-                  "Planchado",
+                  "Planchando",
                   "Terminado" 
                 ]
       },
@@ -96,7 +98,7 @@ function cargar() {
                   "Arreglando",
                   "Eliminación de manchas",
                   "Lavando en seco",
-                  "Planchado",
+                  "Planchando",
                   "Terminado"
                 ]
       },
@@ -109,7 +111,7 @@ function cargar() {
                 "Secado",
                 "Secado y Revisión",
                 "Tintado",
-                "Planchado",
+                "Planchando",
                 "Terminado" 
               ]
       }
@@ -120,56 +122,56 @@ function cargar() {
     articulos: [
       {
         clave: "prod-1",
-        nombre: "detergente color",
+        nombre: "Detergente ropa color",
         stock: 1,
         disponible: true,
         precio: 3
       },
       {
         clave: "prod-2",
-        nombre: "detergente detergente b-n",
+        nombre: "Detergente ropa blanca y negra",
         stock: 1,
         disponible: true,
         precio: 10
       },
       {
         clave: "prod-3",
-        nombre: "suavizante normal",
+        nombre: "Suavizante normal",
         stock: 1,
         disponible: true,
         precio: 6
       },
       {
         clave: "prod-4",
-        nombre: "suavizante delicados",
+        nombre: "Suavizante ropa delicada",
         stock: 1,
         disponible: false,
         precio: 10
       },
       {
         clave: "prod-5",
-        nombre: "gel de lavado",
+        nombre: "Gel de lavado",
         stock: 1,
         disponible: true,
         precio: 10
       },
       {
         clave: "prod-6",
-        nombre: "crema de limpieza especial",
+        nombre: "Crema de limpieza especial",
         stock: 1,
         disponible: true,
         precio: 10
       },
       {
         clave: "prod-7",
-        nombre: "bolsas ropa delicada",
+        nombre: "Bolsa para ropa delicada",
         stock: 1,
         disponible: false,
         precio: 10
       },
       {
         clave: "prod-8",
-        nombre: "pack bolsas ropa delicada",
+        nombre: "Pack de bolsas para ropa delicada",
         stock: 1,
         disponible: true,
         precio: 10
@@ -211,7 +213,6 @@ function cargar() {
         prenda: "Vestido",
         servicio: "Tintado",
         trabajador: "11111-t",
-        extras: "Costura",
         img: "../assets/img/svg/dress.svg",
         precio: 18
       },
@@ -222,7 +223,6 @@ function cargar() {
         prenda: "Camisa",
         servicio: "Lavado en seco",
         trabajador: "22222-t",
-        extras: "Ninguno",
         img: "assets/img/svg/shirt.svg",
         precio: 25
       },
@@ -233,7 +233,6 @@ function cargar() {
         prenda: "Pantalon",
         servicio: "Lavado completo",
         trabajador: "11111-t",
-        extras: "Manchas difíciles",
         img: "assets/img/svg/jeans.svg",
         precio: 13
       },
@@ -244,18 +243,16 @@ function cargar() {
         prenda: "Camiseta",
         servicio: "Lavado en seco",
         trabajador: "11111-t",
-        extras: "Ninguno",
         img: "assets/img/svg/tshirt.svg",
         precio: 8
       },
       {
         cliente: "11111-c",
         codigo: "79356",
-        estado: "Planchado",
+        estado: "Planchando",
         prenda: "Pantalón",
         servicio: "Lavado completo",
         trabajador: "22222-t",
-        extras: "Manchas difíciles",
         img: "assets/img/svg/jeans.svg",
         precio: 15
       },
@@ -266,7 +263,6 @@ function cargar() {
         prenda: "Falda",
         servicio: "Tintado",
         trabajador: "22222-t",
-        extras: "Ninguno",
         img: "assets/img/svg/skirt.svg",
         precio: 25
       }
@@ -284,7 +280,7 @@ function cargar() {
       {
         cliente: "22222-c",
         pedido: "15742",
-        texto: "Prenda que requiere costura",
+        texto: "Prenda con manchas difíciles por lo que requiere servicio adicional",
         costo: 7
       },
       {

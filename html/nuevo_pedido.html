@@ -1,14 +1,14 @@
 <body>
   <style>
-    .select { width: 150px; /* height: 20px; */  border: 1px solid black; cursor: pointer; 
+    .select{ width: 150px; /* height: 20px; */  border: 1px solid black; cursor: pointer; 
       border-radius: 5px; background: white; position: absolute; }
         .option { display: none; }
         .option, .option-selected{ padding: 5px; }
         img { width: 25px; position: relative; top: -2px; left: 3px; }
-        .option:hover{ background: blue; }
-        .option[data=selected]:hover{ background: grey; }
+        .option:hover{ background: rgb(164, 201, 255); }
+        .option[data=selected]:hover{ background: rgb(158, 165, 175); }
         .arrow{ transform: rotate(180deg); position: absolute !important; top: 7px; right: 5px; }
-        .select{  -webkit-touch-callout: none; /* iOS Safari */
+        .select-img{  -webkit-touch-callout: none; /* iOS Safari */
             -webkit-user-select: none; /* Safari */
             -khtml-user-select: none; /* Konqueror HTML */
             -moz-user-select: none; /* Firefox */
@@ -30,14 +30,14 @@
     <form action=" " role="form">
       <div class="row">
         <div class="col-6" style="height:100px">
-          <div class="card bg-light">
-            <div class="card-header">
+          <div class="card bg-light" style="border-color: rgb(164, 201, 255); " >
+            <div class="card-header" style="background-color: rgb(164, 201, 255);">
               <span> <i class="fa fa-tshirt"></i> </span>
               Información de la prenda
             </div>
-            <div class="card-body">
+            <div class="card-body" style="border-color: rgb(164, 201, 255); ">
               <div class="form-group">
-                <label for="tipo_prenda">Tipo de Prenda</label><label class="text-danger">*</label>
+                <label for="tipo_prenda">Tipo de Prenda</label><label class="text-danger">*<font size="0.5" class="text-danger">(obligatorio)</font></label>
                 <div class="select-container">
                   <div class="select" id="select_prenda">
                     <div class="option-selected"></div>
@@ -64,14 +64,17 @@
 
               </div>
               <div class="form-group">
-                <label for="tipo_tela">Tipo de Tela</label><label class="text-danger">*</label>
+                <label for="tipo_tela">Tipo de Tela</label><label class="text-danger">*<font size="0.5" class="text-danger">(obligatorio)</font></label>
                 <div class="select-container">
                     <div class="select" id="select_tela">
                       <div class="option-selected"></div>
                       <hr class="hr">
-                      <div class="option" data="selected" value="españita"><img src="html/spain.png"><span>  Españita</span></div>
-                      <div class="option" value="italia"><img src="html/italy.png"><span>  Italia</span></div>
-                      <div class="option" value="japon"><img src="html/japan.png"><span>  Japón</span></div>
+                      <div class="option" value="algodon"><img src="assets/img/cotton.png"><span>  Algodón</span></div>
+                      <div class="option" value="lana"><img src="assets/img/wool.png"><span>  Lana</span></div>
+                      <div class="option" value="cuero"><img src="assets/img/leather.png"><span>  Cuero</span></div>
+                      <div class="option" value="seda"><img src="assets/img/silk.png"><span>  Seda</span></div>
+                      <div class="option" value="franela"><img src="assets/img/umbrella.png"><span>  Impermeable</span></div>
+                      <div class="option" value="licra"><img src="assets/img/flask.png"><span>  Fibra Sintética</span></div>
                       <div class="arrow">&blacktriangle;</div>
                       <select name="tipo_tela" id="tipo_tela"></select>
                     </div>
@@ -96,11 +99,13 @@
                 </div>
               </div>
               <div class="form-group" id="botones">
-                <label>Tipo de servicio: </label><label class="text-danger">*</label><br />
-                <div class="btn-group" role="group" aria-label="Basic example">
-                  <input type="image" src="assets/img/svg/dry-cleaning.svg" width="80px" style="margin:7px" />
-                  <input type="image" src="assets/img/svg/washing-machine.svg" width="80px" style="margin:5px" />
-                  <input type="image" src="assets/img/svg/paint-bucket.svg" width="80px" style="margin:5px" />
+                <label>Tipo de servicio: </label><label class="text-danger">*<font size="0.5" class="text-danger">(obligatorio)</font></label><br />
+                <div class="btn-group" style="" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-outline-primary" data-dismiss="alert" aria-label="Close"><input type="image" checked src="assets/img/svg/dry-cleaning.svg" width="80px" style="border:none !important; outline:none !important; margin-left:25px; margin-right:25px; height: 120px; border:0;" /></button>
+                   <button type="button"class="btn btn-outline-primary" data-dismiss="alert" aria-label="Close">  <input type="image" src="assets/img/svg/washing-machine.svg" width="80px" style="border:none !important; outline:none !important; margin-left:25px; margin-right:25px; height: 120px; border:0;" /></button>
+                
+                   <button type="button" class="btn btn-outline-primary" data-dismiss="alert" aria-label="Close"><input type="image" src="assets/img/svg/paint-bucket.svg" width="80px" style="border:none !important; outline:none !important;margin-left:25px; margin-right:25px; height: 120px; border:0;" /></button>
+                  
                 </div>
               </div>
             </div>
@@ -108,19 +113,19 @@
         </div>
 
         <div class="col-6" style="height:100px">
-          <div class="card bg-light">
-            <div class="card-header">
+          <div class="card bg-light" style="border-color: rgb(164, 201, 255);">
+            <div class="card-header" style="background-color: rgb(164, 201, 255);">
               <span> <i class="fa fa-user"></i> </span>
               Información del cliente
             </div>
-            <div class="card-body">
+            <div class="card-body" style="border-color: rgb(164, 201, 255); ">
               <div class="form-group" id="trabajador">
-                <label for="idt">ID Trabajador</label><label class="text-danger">*</label>
+                <label for="idt">ID Trabajador</label><label class="text-danger">*<font size="0.5" class="text-danger">(obligatorio)</font></label>
                 <input type="text" name="idt" id="idt" placeholder="Ingrese trabajador" required class="form-control" />
               </div>
 
               <div class="form-group" id="cliente">
-                <label for="idc">ID Cliente </label><label class="text-danger">*</label>
+                <label for="idc">ID Cliente </label><label class="text-danger">*<font size="0.5" class="text-danger">(obligatorio)</font></label>
                 <div class="form-row">
                   <div class="col">
                     <input type="text" name="idc" id="idc" required placeholder="Buscar cliente" class="form-control" />
@@ -140,9 +145,12 @@
                 <label for="obs">Observaciones</label>
                 <textarea name="idc" id="obs" class="form-control"></textarea>
               </div>
-              <button type="button" class="btn btn-primary mb-2" id="agregarPedido">
+              <div align="right">
+                <button type="button" class="btn btn-primary mb-2" id="agregarPedido" >
                 Agregar pedido
               </button>
+              </div>
+              
             </div>
           </div>
         </div>
