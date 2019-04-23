@@ -12,7 +12,7 @@ function cargarUsuarioVentas() {
       cargarArticulosVentas();
     });
   } else {
-    alert("no existe el usuario");
+    alert("El usuario ingresado no existe");
     console.log("no existe");
   }
 }
