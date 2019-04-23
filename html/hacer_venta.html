@@ -4,7 +4,7 @@
       <div class="card-body">
         <div class="row">
           <div class="col-6">
-            <h4>Juan Perez Perez</h4>
+            <h4 id="nombreUser">Juan Perez Perez</h4>
             <img src="../assets/img/user.svg" width="60px" />
           </div>
           <div class="col-3">
@@ -37,73 +37,88 @@
     <br />
     <div class="row">
       <div class="col-9">
-        <div class="accordion" id="accordionVentas">
-          <div class="card" id="accordionPedidos">
-            <div class="card-header" id="accordionPedidosHeader">
-              <h2 class="mb-0">
+        <div id="accordion">
+          <div class="card" id="collapse-pedidos">
+            <div class="card-header" id="headerPedidos">
+              <h5 class="mb-0">
                 <button
                   class="btn btn-link"
-                  type="button"
                   data-toggle="collapse"
-                  data-target="#collapseOne"
+                  data-target="#collapsePedido-1"
                   aria-expanded="true"
-                  aria-controls="collapseOne"
+                  aria-controls="collapsePedido-1"
                 >
-                  Pedidos
+                  <h5>Pedidos del cliente</h5>
                 </button>
-              </h2>
+              </h5>
             </div>
 
             <div
-              id="collapseOne"
-              class="collapse show"
-              aria-labelledby="accordionPedidosHeader"
-              data-parent="#accordionExample"
+              id="collapsePedido-1"
+              class="collapse"
+              aria-labelledby="headerPedidos"
+              data-parent="#accordion"
             >
               <div class="card-body">
-                <div class="card">
-                  <div class="card-body">
-                    <p class="card-text">Info pedido 1</p>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-body">
-                    <p class="card-text">Info pedido 2</p>
+                <div class="card-columns" id="columnaPedidos">
+                  <div class="card border-primary " id="primerPedido">
+                    <div class="card-header" id="primerPedidoHeader">
+                      <b>ID: </b>1234
+                    </div>
+
+                    <div class="card-body">
+                      <div class="card-text"><b>TIPO DE PRENDA: </b>Polera</div>
+                      <div class="card-text">
+                        <b>TIPO DE SERVICIO: </b>Lavado en seco
+                        <img
+                          src="../assets/img/svg/dry-cleaning.svg"
+                          width="30"
+                        />
+                      </div>
+                      <div class="card-text">
+                        <b>TOTAL A PAGAR: </b>10 &euro;
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="card" id="accordionProductos">
-            <div class="card-header" id="accordionProductosHeader">
-              <h2 class="mb-0">
+          <div class="card" id="productos">
+            <div class="card-header" id="headerProductos">
+              <h5 class="mb-0">
                 <button
-                  class="btn btn-link collapsed"
-                  type="button"
+                  class="btn btn-link"
                   data-toggle="collapse"
-                  data-target="#collapseTwo"
+                  data-target="#collapseProducto-1"
                   aria-expanded="false"
-                  aria-controls="collapseTwo"
+                  aria-controls="collapseProducto-1"
                 >
-                  Productos
+                  <h5>Productos a la venta</h5>
                 </button>
-              </h2>
+              </h5>
             </div>
+
             <div
-              id="collapseTwo"
+              id="collapseProducto-1"
               class="collapse"
-              aria-labelledby="accordionProductosHeader"
-              data-parent="#accordionExample"
+              aria-labelledby="headerProductos"
+              data-parent="#accordion"
             >
               <div class="card-body">
-                <div class="card">
-                  <div class="card-body">
-                    <p class="card-text">Detergente super 1</p>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-body">
-                    <p class="card-text">Detergente super 2</p>
+                <div class="card-columns">
+                  <div class="card  border-primary">
+                    <img
+                      src="../assets/img/detergente1.jpeg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Detergente Super
+                      </h5>
+                      <p class="card-text">50 &euro;</p>
+                    </div>
                   </div>
                 </div>
               </div>

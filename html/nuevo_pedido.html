@@ -1,17 +1,29 @@
 <body>
+  <style>
+    .select { width: 150px; /* height: 20px; */  border: 1px solid black; cursor: pointer; 
+      border-radius: 5px; background: white; position: absolute; }
+        .option { display: none; }
+        .option, .option-selected{ padding: 5px; }
+        img { width: 25px; position: relative; top: -2px; left: 3px; }
+        .option:hover{ background: blue; }
+        .option[data=selected]:hover{ background: grey; }
+        .arrow{ transform: rotate(180deg); position: absolute !important; top: 7px; right: 5px; }
+        .select{  -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+        }
+        .hr{ display: none; margin: 0px 8px; }
+        #tipo_prenda, #tipo_tela{ display: none; }
+        .select-container{ height: 36px; } /* Tamaño del select. Ver el tamaño inspeccionando el elemento si se cambia. */
+    </style>
   <div class="container">
-    <div
-      class="alert alert-success alert-dismissible fade show"
-      style="display:none"
-      role="alert"
-    >
+    <div class="alert alert-success alert-dismissible fade show" style="display:none" role="alert">
       Nuevo cliente creado con éxito!
-      <button
-        type="button"
-        class="close"
-        data-dismiss="alert"
-        aria-label="Close"
-      >
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
@@ -25,28 +37,46 @@
             </div>
             <div class="card-body">
               <div class="form-group">
-                <label for="tipo_prenda">Tipo de Prenda</label
-                ><label class="text-danger">*</label>
+                <label for="tipo_prenda">Tipo de Prenda</label><label class="text-danger">*</label>
+                <div class="select-container">
+                  <div class="select" id="select_prenda">
+                    <div class="option-selected"></div>
+                    <hr class="hr">
+                    
+                    <div class="option" value="camiseta"><img src="../assets/img/tshirt.png"><span>  Camiseta</span></div>
+                    <div class="option" value="camisa"><img src="../assets/img/shirt.png"><span>  Camisa</span></div>
+                    <div class="option" value="pantalon"><img src="../assets/img/pants.png"><span>  Pantalón</span></div>
+                    <div class="option" value="falda"><img src="../assets/img/skirt.png"><span>  Falda</span></div>
+                    <div class="option" value="vestido"><img src="../assets/img/dress.png"><span>  Vestido</span></div>
+                    <div class="arrow">&blacktriangle;</div>
+                    <select name="tipo_prenda" id="tipo_prenda"></select>
+                  </div>
+                </div>
 
-                <select
-                  name="tipo_prenda"
-                  id="tipo_prenda"
-                  class="form-control"
-                >
+                <!-- <select name="tipo_prenda" id="tipo_prenda" class="form-control">
                   <option value="selec">--Seleccionar--</option>
-                  <option value="camiseta"
-                    >Camiseta<span> <i class="fa fa-user"></i> </span
-                  ></option>
+                  <option value="camiseta">Camiseta<span> <i class="fa fa-user"></i> </span></option>
                   <option value="camisa">Camisa</option>
                   <option value="pantalon">Pantalón</option>
                   <option value="falda">Falda</option>
                   <option value="vestido">Vestido</option>
-                </select>
+                </select> -->
+
               </div>
               <div class="form-group">
-                <label for="tipo_tela">Tipo de Tela</label
-                ><label class="text-danger">*</label>
-                <select name="tipo_tela" id="tipo_tela" class="form-control">
+                <label for="tipo_tela">Tipo de Tela</label><label class="text-danger">*</label>
+                <div class="select-container">
+                    <div class="select" id="select_tela">
+                      <div class="option-selected"></div>
+                      <hr class="hr">
+                      <div class="option" data="selected" value="españita"><img src="html/spain.png"><span>  Españita</span></div>
+                      <div class="option" value="italia"><img src="html/italy.png"><span>  Italia</span></div>
+                      <div class="option" value="japon"><img src="html/japan.png"><span>  Japón</span></div>
+                      <div class="arrow">&blacktriangle;</div>
+                      <select name="tipo_tela" id="tipo_tela"></select>
+                    </div>
+                  </div>
+                <!--select name="tipo_tela" id="tipo_tela" class="form-control">
                   <option value="selec">--Seleccionar--</option>
                   <option value="algodon">Algodón</option>
                   <option value="lana">Lana</option>
@@ -54,16 +84,11 @@
                   <option value="seda">Seda</option>
                   <option value="franela">Franela</option>
                   <option value="licra">Licra</option>
-                </select>
+                </select-->
               </div>
               <div class="form-group">
                 <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="defaultCheck1"
-                  />
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
                   <label class="form-check-label" for="defaultCheck1">
                     <img src="../assets/img/svg/thread.svg" width="20" />
                     Modista
@@ -71,27 +96,11 @@
                 </div>
               </div>
               <div class="form-group" id="botones">
-                <label>Tipo de servicio: </label
-                ><label class="text-danger">*</label><br />
+                <label>Tipo de servicio: </label><label class="text-danger">*</label><br />
                 <div class="btn-group" role="group" aria-label="Basic example">
-                  <input
-                    type="image"
-                    src="../assets/img/svg/dry-cleaning.svg"
-                    width="80px"
-                    style="margin:7px"
-                  />
-                  <input
-                    type="image"
-                    src="../assets/img/svg/washing-machine.svg"
-                    width="80px"
-                    style="margin:5px"
-                  />
-                  <input
-                    type="image"
-                    src="../assets/img/svg/paint-bucket.svg"
-                    width="80px"
-                    style="margin:5px"
-                  />
+                  <input type="image" src="../assets/img/svg/dry-cleaning.svg" width="80px" style="margin:7px" />
+                  <input type="image" src="../assets/img/svg/washing-machine.svg" width="80px" style="margin:5px" />
+                  <input type="image" src="../assets/img/svg/paint-bucket.svg" width="80px" style="margin:5px" />
                 </div>
               </div>
             </div>
@@ -106,38 +115,18 @@
             </div>
             <div class="card-body">
               <div class="form-group" id="trabajador">
-                <label for="idt">ID Trabajador</label
-                ><label class="text-danger">*</label>
-                <input
-                  type="text"
-                  name="idt"
-                  id="idt"
-                  placeholder="Ingrese trabajador"
-                  required
-                  class="form-control"
-                />
+                <label for="idt">ID Trabajador</label><label class="text-danger">*</label>
+                <input type="text" name="idt" id="idt" placeholder="Ingrese trabajador" required class="form-control" />
               </div>
 
               <div class="form-group" id="cliente">
-                <label for="idc">ID Cliente </label
-                ><label class="text-danger">*</label>
+                <label for="idc">ID Cliente </label><label class="text-danger">*</label>
                 <div class="form-row">
                   <div class="col">
-                    <input
-                      type="text"
-                      name="idc"
-                      id="idc"
-                      required
-                      placeholder="Buscar cliente"
-                      class="form-control"
-                    />
+                    <input type="text" name="idc" id="idc" required placeholder="Buscar cliente" class="form-control" />
                   </div>
                   <div class="col">
-                    <button
-                      type="button"
-                      onclick="buscarCliente();"
-                      class="btn btn-primary"
-                    >
+                    <button type="button" onclick="buscarCliente();" class="btn btn-primary">
                       Buscar cliente
                     </button>
                   </div>
@@ -151,11 +140,7 @@
                 <label for="obs">Observaciones</label>
                 <textarea name="idc" id="obs" class="form-control"></textarea>
               </div>
-              <button
-                type="button"
-                class="btn btn-primary mb-2"
-                id="agregarPedido"
-              >
+              <button type="button" class="btn btn-primary mb-2" id="agregarPedido">
                 Agregar pedido
               </button>
             </div>
@@ -166,25 +151,14 @@
   </div>
 
   <!-- Modal -->
-  <div
-    class="modal fade"
-    id="modalNuevoCliente"
-    role="dialog"
-    aria-labelledby="modalRegistroLabel"
-    aria-hidden="true"
-  >
+  <div class="modal fade" id="modalNuevoCliente" role="dialog" aria-labelledby="modalRegistroLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="modalRegistroLabel">
             Ingresar nuevo cliente
           </h5>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -192,47 +166,23 @@
           <form action="" role="form">
             <div class="form-group" id="dniNuevo">
               <label for="idClienteNuevo">DNI Cliente</label>
-              <input
-                type="text"
-                name="idClienteNuevo"
-                id="idClienteNuevo"
-                placeholder="11111111-1"
-                class="form-control"
-                required
-              />
+              <input type="text" name="idClienteNuevo" id="idClienteNuevo" placeholder="11111111-1" class="form-control"
+                required />
             </div>
             <div class="form-group" id="nombreNuevo">
               <label for="nombreClienteNuevo">Nombre y Apellidos</label>
-              <input
-                type="text"
-                name="nombreClienteNuevo"
-                id="nombreClienteNuevo"
-                placeholder="Juan Alfaro Toledo"
-                class="form-control"
-                required
-              />
+              <input type="text" name="nombreClienteNuevo" id="nombreClienteNuevo" placeholder="Juan Alfaro Toledo"
+                class="form-control" required />
             </div>
             <div class="form-group" id="telefonoNuevo">
               <label for="telefonoClienteNuevo">Teléfono</label>
-              <input
-                type="text"
-                name="telefonoClienteNuevo"
-                id="telefonoClienteNuevo"
-                placeholder="34 369 255 019"
-                class="form-control"
-                required
-              />
+              <input type="text" name="telefonoClienteNuevo" id="telefonoClienteNuevo" placeholder="34 369 255 019"
+                class="form-control" required />
             </div>
             <div class="form-group" id="mailNuevo">
               <label for="mailClienteNuevo">Teléfono</label>
-              <input
-                type="text"
-                name="mailClienteNuevo"
-                id="mailClienteNuevo"
-                placeholder="micorreo@ejemplo.es"
-                class="form-control"
-                required
-              />
+              <input type="text" name="mailClienteNuevo" id="mailClienteNuevo" placeholder="micorreo@ejemplo.es" class="form-control"
+                required />
             </div>
           </form>
         </div>
@@ -240,15 +190,14 @@
           <button type="button" class="btn btn-danger" data-dismiss="modal">
             Cancelar
           </button>
-          <button
-            type="button"
-            class="btn btn-success"
-            onclick="crearCliente();"
-          >
+          <button type="button" class="btn btn-success" onclick="crearCliente();">
             Crear cliente
           </button>
         </div>
       </div>
     </div>
   </div>
+  <script>
+    cargarSelects();
+  </script>
 </body>
