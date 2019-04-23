@@ -1,11 +1,8 @@
 <body>
-
   <div id="login-container" class="card">
-    <div id="image-login"><img src="assets/img/user.svg" alt="login"></div>
+    <div id="image-login"><img src="assets/img/user.svg" alt="login" /></div>
     <form role="form" action="#" onsubmit="ingresar(); return false">
-
       <div class="form-body">
-
         <div class="form-group">
           <div class="input-group">
             <div class="input-group-prepend">
@@ -17,7 +14,8 @@
               type="text"
               class="form-control"
               autocomplete="username"
-              placeholder="Usuario" required
+              placeholder="Usuario"
+              required
             />
           </div>
           <span class="help-block"></span>
@@ -26,7 +24,7 @@
         <div class="form-group">
           <div class="input-group">
             <div class="input-group-prepend">
-                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+              <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
             </div>
             <input
               name="password"
@@ -34,7 +32,8 @@
               type="password"
               class="form-control"
               autocomplete="current-password"
-              placeholder="Contraseña" required
+              placeholder="Contraseña"
+              required
             />
           </div>
         </div>
@@ -42,13 +41,19 @@
 
       <div class="form-group">
         <button type="submit" class="btn btn-primary btn-block">
-          <span> <i id="login-icon" class="fa fa-sign-in-alt"></i>Ingresar </span>
+          <span>
+            <i id="login-icon" class="fa fa-sign-in-alt"></i>Ingresar
+          </span>
         </button>
       </div>
-      
     </form>
-  
-    <div id="wrong-pass" class="alert alert-warning" role="alert" style="display:none">
+
+    <div
+      id="wrong-pass"
+      class="alert alert-warning"
+      role="alert"
+      style="display:none"
+    >
       Datos inconrrectos, intenta de nuevo
     </div>
   </div>
