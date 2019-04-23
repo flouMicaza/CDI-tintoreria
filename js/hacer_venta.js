@@ -196,3 +196,8 @@ function construirPedido(pedido, num) {
     }
   });
 }
+
+function gotoVentas(){
+  
+  $("#slider").load("./html/pagar.html");
+}
