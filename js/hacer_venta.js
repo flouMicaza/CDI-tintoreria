@@ -12,7 +12,7 @@ function cargarUsuarioVentas() {
       cargarArticulosVentas();
     });
   } else {
-    alert("no existe el usuario");
+    alert("El usuario ingresado no existe");
     console.log("no existe");
   }
 }
@@ -121,7 +121,10 @@ function agregarProductoResumen(id) {
   $("#precioTotal")
     .find("p")
     .text(parseInt(totalActual) + parseInt(precio) + "\u20AC");
-
+  window.localStorage.setItem(
+    "totalActual",
+    JSON.stringify(parseInt(totalActual) + parseInt(precio))
+  );
   console.log(totalActual.length, "holaa");
   var botonX = $("#ventaProducto" + id).find("span");
   botonX.click(function() {
@@ -157,8 +160,10 @@ function agregarPedidoResumen(id) {
   $("#precioTotal")
     .find("p")
     .text(parseInt(totalActual) + parseInt(precio) + "\u20AC");
-
-  console.log(totalActual.length, "holaa");
+  window.localStorage.setItem(
+    "totalActual",
+    JSON.stringify(parseInt(totalActual) + parseInt(precio))
+  );
 }
 function quitarDeResumen(elemento) {
   console.log(elemento);
@@ -197,7 +202,12 @@ function construirPedido(pedido, num) {
   });
 }
 
-function gotoVentas(){
-  
-  $("#slider").load("./html/pagar.html");
+function gotoVentas() {
+  $("#slider").load("./html/pagar.html", function() {
+    var totalActual = JSON.parse(window.localStorage.getItem("totalActual"));
+    console.log($("#precioTotalPagar").find("p"));
+    $("#precioTotalPagar")
+      .find("p")
+      .text(totalActual + "\u20AC");
+  });
 }
