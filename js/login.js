@@ -121,7 +121,17 @@ function cargaStock() {
   );
 }
 function cargaPedidos() {
-  $("#slider").load("./html/pedidos_trabajador.html");
+  $("#slider").load("./html/pedidos_trabajador.html", function(){
+    var pedidos = JSON.parse(window.localStorage.getItem("pedidos")).pedidos;
+    $.each(pedidos, function(index, pedido){
+      var pedidoTxt = "<div class='row'>";
+      pedidoTxt += "<div class='col-3 columna'>"+pedido.trabajador+"</div>";
+      pedidoTxt += "<div class='col-3 columna'>"+pedido.codigo+"</div>";
+      pedidoTxt += "<div class='col-3 columna'>"+pedido.estado+"</div>";
+      pedidoTxt += "<div class='col-3 columna'>"+pedido.extras+"</div></div>";
+      $("#pedidos-encargado").append(pedidoTxt);
+    });
+  });
   $(".breadcrumb-item").remove();
   $("#breadcrumb").append(
     "<li class='breadcrumb-item'><a href='#' onclick='cargaInicio();'>Inicio</a></li><li class='breadcrumb-item' aria-current='page'>Pedidos</li>"
